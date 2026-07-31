@@ -8,7 +8,96 @@ document.addEventListener('DOMContentLoaded', () => {
   initCorporateCounters();
   initHealthCalculator();
   initQuickAccessCards();
+  initGalleryFilter();
+  initGalleryLightbox();
 });
+
+/**
+ * 5. Inisialisasi Filter Kategori Galeri Foto
+ */
+function initGalleryFilter() {
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const galleryItems = document.querySelectorAll('.gallery-card');
+
+  if (!filterButtons.length || !galleryItems.length) return;
+
+  filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      filterButtons.forEach(btn => btn.classList.remove('active'));
+      button.classList.add('active');
+
+      const filterCategory = button.getAttribute('data-filter');
+
+      galleryItems.forEach(item => {
+        const itemCategory = item.getAttribute('data-category');
+        if (filterCategory === 'all' || itemCategory === filterCategory) {
+          item.style.display = 'flex';
+          item.style.animation = 'fadeIn 0.4s ease';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    });
+  });
+}
+
+/**
+ * 6. Inisialisasi Lightbox Modal Preview Galeri Foto
+ */
+function initGalleryLightbox() {
+  const galleryCards = document.querySelectorAll('.gallery-card');
+  const lightboxModal = document.getElementById('lightbox-modal');
+  const lightboxImage = document.getElementById('lightbox-img');
+  const lightboxTitle = document.getElementById('lightbox-title');
+  const lightboxDesc = document.getElementById('lightbox-desc');
+  const closeButton = document.getElementById('lightbox-close-btn');
+
+  if (!galleryCards.length || !lightboxModal || !lightboxImage) return;
+
+  galleryCards.forEach(card => {
+    card.addEventListener('click', () => {
+      const imgElement = card.querySelector('.gallery-img-wrapper img');
+      const titleElement = card.querySelector('.gallery-item-title');
+      const descElement = card.querySelector('.gallery-item-desc');
+
+      if (imgElement) {
+        lightboxImage.src = imgElement.src;
+        lightboxImage.alt = imgElement.alt || 'Preview Foto Galeri';
+      }
+      if (titleElement) {
+        lightboxTitle.textContent = titleElement.textContent;
+      }
+      if (descElement) {
+        lightboxDesc.textContent = descElement.textContent;
+      }
+
+      lightboxModal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  function closeLightbox() {
+    lightboxModal.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  if (closeButton) {
+    closeButton.addEventListener('click', closeLightbox);
+  }
+
+  lightboxModal.addEventListener('click', (event) => {
+    if (event.target === lightboxModal) {
+      closeLightbox();
+    }
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && lightboxModal.classList.contains('active')) {
+      closeLightbox();
+    }
+  });
+}
+
 
 /**
  * 1. Full-Page Connecting Dots / Particle Network Background Animation (Dari Atas Hingga Atas Footer)
