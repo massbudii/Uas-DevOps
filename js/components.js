@@ -181,11 +181,22 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /**
- * Pemuat Komponen HTML Universal (HTTP Fetch dengan Local Fallback)
+ * Pemuat Komponen HTML Universal (HTTP Server & Local file:// Protocol Safe)
  */
 function loadComponent(placeholderId, componentPath, fallbackHtml, callback) {
   const placeholder = document.getElementById(placeholderId);
   if (!placeholder) return;
+
+  // Jika dibuka langsung via file:// (double-click di Windows Explorer), sertakan fallback secara langsung
+  if (window.location.protocol === 'file:') {
+    if (fallbackHtml) {
+      placeholder.innerHTML = fallbackHtml;
+      if (callback && typeof callback === 'function') {
+        callback();
+      }
+    }
+    return;
+  }
 
   fetch(componentPath)
     .then(response => {
@@ -201,7 +212,6 @@ function loadComponent(placeholderId, componentPath, fallbackHtml, callback) {
       }
     })
     .catch(() => {
-      // Fallback otomatis jika dipanggil langsung via file://
       if (fallbackHtml) {
         placeholder.innerHTML = fallbackHtml;
         if (callback && typeof callback === 'function') {
