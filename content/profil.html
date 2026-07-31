@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profil RS Awal Bros - Sejarah, Visi Misi & Jaringan Rumah Sakit</title>
+  <meta name="description" content="Profil Lengkap RS Awal Bros Dumai. Pelajari sejarah pendirian, visi dan misi, nilai budaya KASIH, jaringan 8 cabang rumah sakit, serta pencapaian akreditasi KARS Paripurna.">
+  <link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg">
+  <link rel="shortcut icon" type="image/svg+xml" href="../assets/img/favicon.svg">
+  <link rel="alternate icon" type="image/png" href="../assets/img/logo-rs-awalbros.png">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- Full-Page Particle Network Background Canvas -->
+  <canvas id="particle-canvas"></canvas>
+
+  <!-- Master Navbar Placeholder (Pre-rendered Static Fallback) -->
+  <div id="navbar-placeholder">
+    <div class="topbar">
+      <div class="container">
+        <div class="topbar-ticker-wrapper">
+          <div class="topbar-ticker-track">
+            <div class="topbar-item">
+              <span class="emergency-badge neon-badge">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16" class="ambulance-icon">
+                  <path d="M4.5 11a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm7 0a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z"/>
+                  <path d="M0 1.5A1.5 1.5 0 0 1 1.5 0h9A1.5 1.5 0 0 1 12 1.5V3h1.365a1.5 1.5 0 0 1 1.258.683l1.17 1.756A1.5 1.5 0 0 1 16 6.324V11.5a1.5 1.5 0 0 1-1.5 1.5h-.5a2.5 2.5 0 0 1-5 0h-2a2.5 2.5 0 0 1-5 0H1.5A1.5 1.5 0 0 1 0 11.5v-10zM10.5 4V1.5a.5.5 0 0 0-.5-.5H1.5a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h.5a2.5 2.5 0 0 1 4.5 0h2a2.5 2.5 0 0 1 4.5 0h.5a.5.5 0 0 0 .5-.5V6.324a.5.5 0 0 0-.077-.268L12.8 4.3a.5.5 0 0 0-.419-.228H10.5z"/>
+                  <path d="M7 4h1.5v1.5H10V7H8.5v1.5H7V7H5.5V5.5H7V4z"/>
+                </svg>
+                IGD 24 JAM
+              </span>
+            </div>
+            <div class="topbar-item highlight-phone">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l.975-.978a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328z"/>
+              </svg>
+              <span>Call Center Emergency: <strong>(0765) 38888</strong></span>
+            </div>
+            <div class="topbar-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+              </svg>
+              <span>Jl. Jend. Sudirman No. 88, Dumai, Riau</span>
+            </div>
+            <div class="topbar-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+                <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+              </svg>
+              <span>Jam Operasional: <strong>24 Jam Setiap Hari</strong></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <header class="header-navbar">
+      <div class="container navbar-container">
+        <a href="index.html" class="brand-logo-wrapper" aria-label="Beranda RS Awal Bros Dumai">
+          <img src="../assets/img/logo-rs-awalbros.png" alt="Logo Emblem RS Awal Bros" class="navbar-logo-img">
+          <img src="../assets/img/logo-banner.png" alt="RS Awal Bros Red Banner" class="navbar-logo-banner">
+        </a>
+
+        <button class="mobile-toggle" id="mobile-toggle-btn" aria-label="Toggle Menu">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+
+        <nav>
+          <ul class="nav-menu" id="nav-menu-list">
+            <li><a href="index.html" class="nav-link">Beranda</a></li>
+
+            <li class="nav-item-dropdown active">
+              <a href="tentang-kami.html" class="nav-link active">
+                Tentang Kami
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" viewBox="0 0 16 16" style="margin-left: 2px;">
+                  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                </svg>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="profil.html" class="dropdown-link">Profil RS Awal Bros</a></li>
+                <li><a href="galeri.html" class="dropdown-link">Galeri Rumah Sakit</a></li>
+              </ul>
+            </li>
+
+            <li><a href="layanan.html" class="nav-link">Layanan</a></li>
+            <li><a href="dokter.html" class="nav-link">Dokter</a></li>
+
+            <li class="nav-item-dropdown">
+              <a href="fasilitas.html" class="nav-link">
+                Fasilitas
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" viewBox="0 0 16 16" style="margin-left: 2px;">
+                  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                </svg>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="fasilitas.html#rawat-jalan" class="dropdown-link">Poliklinik Spesialis</a></li>
+                <li><a href="fasilitas.html#rawat-inap" class="dropdown-link">Layanan Rawat Inap</a></li>
+                <li><a href="fasilitas.html#penunjang-medis" class="dropdown-link">Laboratorium & Radiologi</a></li>
+                <li><a href="fasilitas.html#gawat-darurat" class="dropdown-link">IGD & Ambulans 24 Jam</a></li>
+                <li><a href="fasilitas.html#mcu" class="dropdown-link">Medical Check Up (MCU)</a></li>
+                <li><a href="fasilitas.html#cath-lab" class="dropdown-link">Pusat Jantung & Cath Lab</a></li>
+              </ul>
+            </li>
+
+            <li><a href="janji-temu.html" class="nav-link">Janji Temu</a></li>
+            <li><a href="kontak.html" class="nav-link">Kontak</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+  </div>
+
+  <main>
+
+    <!-- 1. SUB-PAGE HERO BANNER -->
+    <section class="page-banner">
+      <div class="container">
+        <h1>Profil RS Awal Bros</h1>
+        <div class="breadcrumbs">
+          <a href="index.html">Beranda</a>
+          <span>&rsaquo;</span>
+          <span>Tentang Kami</span>
+          <span>&rsaquo;</span>
+          <span class="current">Profil Rumah Sakit</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. PENGANTAR KORPORAT & SEJARAH (TIMELINE INTERAKTIF) -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="hero-tag">Jejak Langkah & Dedikasi</span>
+          <h2 class="section-title">Sejarah & Perkembangan RS Awal Bros</h2>
+          <p class="section-subtitle">Perjalanan panjang RS Awal Bros Group dari perintis layanan kesehatan swasta di Riau hingga menjadi jaringan rumah sakit terdepan bertaraf internasional.</p>
+        </div>
+
+        <!-- Vertical Interactive Timeline -->
+        <div class="timeline-vertical">
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-year">1998</span>
+              <h3 class="timeline-title">Pendirian Rumah Sakit Pertama</h3>
+              <p class="timeline-desc">Didirikan oleh Drs. H. Awaloeddin di Jalan Jend. Sudirman Pekanbaru, mengawali komitmen menghadirkan layanan medis modern dengan standar keselamatan pasien yang tinggi di Provinsi Riau.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-year">2003</span>
+              <h3 class="timeline-title">Ekspansi ke Kepulauan Riau</h3>
+              <p class="timeline-desc">Peresmian RS Awal Bros Batam untuk menjawab kebutuhan fasilitas medis berkualitas internasional bagi masyarakat di wilayah pesisir dan Kepulauan Riau.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-year">2014</span>
+              <h3 class="timeline-title">Pengembangan RS Awal Bros Panam</h3>
+              <p class="timeline-desc">Perluasan jangkauan ke kawasan berkembang Pekanbaru Panam guna memberikan kemudahan akses perawatan spesialis dan rawat inap bagi masyarakat luas.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-year">2017</span>
+              <h3 class="timeline-title">Pusat Rujukan Jantung RS Awal Bros A. Yani</h3>
+              <p class="timeline-desc">Peresmian cabang RS Awal Bros Ahmad Yani Pekanbaru yang difokuskan sebagai pusat layanan rujukan kardiovaskular dan tindakan bedah tingkat lanjut.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-year">2021</span>
+              <h3 class="timeline-title">Peresmian RS Awal Bros Dumai</h3>
+              <p class="timeline-desc">Hadir di Kota Dumai sebagai rumah sakit rujukan terpadu 24 jam berbasis teknologi medis mutakhir, melayani masyarakat pesisir Riau dengan standar akreditasi tinggi.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-year">2023 - Sekarang</span>
+              <h3 class="timeline-title">Pusat Keunggulan Cath Lab & Akreditasi Paripurna</h3>
+              <p class="timeline-desc">Pengembangan fasilitas kateterisasi jantung (Cath Lab), pusat penanganan trauma 24 jam, serta meraih Akreditasi Paripurna KARS Bintang Lima secara berkelanjutan.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. VISI, MISI & NILAI BUDAYA (KASIH) -->
+    <section class="section section-bg-light">
+      <div class="container">
+        <div class="section-header">
+          <span class="hero-tag">Landasan Operasional</span>
+          <h2 class="section-title">Visi, Misi & Nilai Perusahaan</h2>
+          <p class="section-subtitle">Komitmen moral dan profesional yang menuntun seluruh tenaga medis dan staf RS Awal Bros dalam melayani pasien.</p>
+        </div>
+
+        <div class="vision-mission-grid">
+          <!-- Kartu Visi -->
+          <div class="vm-card">
+            <div class="vm-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
+                <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
+              </svg>
+            </div>
+            <h3 class="vm-title">Visi Perusahaan</h3>
+            <p style="color: var(--secondary-neutral); font-size: 1.05rem; line-height: 1.7; font-weight: 500;">
+              "Menjadi Jaringan Rumah Sakit Terkemuka yang Terpercaya dan Mengutamakan Keselamatan Pasien Berstandar Internasional di Indonesia."
+            </p>
+          </div>
+
+          <!-- Kartu Misi -->
+          <div class="vm-card">
+            <div class="vm-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                <path d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.235.235 0 0 1 .02-.022z"/>
+              </svg>
+            </div>
+            <h3 class="vm-title">Misi Utama</h3>
+            <ul class="vm-list">
+              <li>
+                <strong style="color: var(--primary-mint);">&bull;</strong>
+                <span>Menyediakan pelayanan kesehatan komprehensif, berkualitas tinggi, dan ramah bagi seluruh lapisan masyarakat.</span>
+              </li>
+              <li>
+                <strong style="color: var(--primary-mint);">&bull;</strong>
+                <span>Mengutamakan keselamatan pasien (*Patient Safety*) melalui prosedur medis berstandar internasional.</span>
+              </li>
+              <li>
+                <strong style="color: var(--primary-mint);">&bull;</strong>
+                <span>Mengembangkan kompetensi dokter spesialis dan tenaga kesehatan secara berkesinambungan.</span>
+              </li>
+              <li>
+                <strong style="color: var(--primary-mint);">&bull;</strong>
+                <span>Mengadopsi sarana prasarana dan teknologi medis terkini untuk penanganan medis yang cepat dan akurat.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Nilai Budaya KASIH -->
+        <div style="margin-top: 3.5rem;">
+          <h3 style="text-align: center; font-size: 1.6rem; color: var(--primary-mint); margin-bottom: 0.5rem;">Nilai Budaya Perusahaan (K.A.S.I.H)</h3>
+          <p style="text-align: center; color: var(--secondary-neutral); font-size: 0.95rem; margin-bottom: 2rem;">Nilai luhur yang diterapkan oleh setiap karyawan RS Awal Bros dalam memberikan pelayanan prima.</p>
+
+          <div class="values-grid">
+            <div class="value-card">
+              <div class="value-letter">K</div>
+              <h4 class="value-title">Komitmen</h4>
+              <p class="value-desc">Dedikasi penuh pada mutu dan keselamatan pasien.</p>
+            </div>
+            <div class="value-card">
+              <div class="value-letter">A</div>
+              <h4 class="value-title">Alami</h4>
+              <p class="value-desc">Sikap hangat, ramah, jujur, dan berempati.</p>
+            </div>
+            <div class="value-card">
+              <div class="value-letter">S</div>
+              <h4 class="value-title">Sinergi</h4>
+              <p class="value-desc">Kerja sama tim multidisiplin yang kokoh.</p>
+            </div>
+            <div class="value-card">
+              <div class="value-letter">I</div>
+              <h4 class="value-title">Inovasi</h4>
+              <p class="value-desc">Penerapan teknologi modern terdepan.</p>
+            </div>
+            <div class="value-card">
+              <div class="value-letter">H</div>
+              <h4 class="value-title">Handal</h4>
+              <p class="value-desc">Profesional, kompeten, dan terpercaya.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 4. CABANG JARINGAN RUMAH SAKIT RS AWAL BROS GROUP -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="hero-tag">Jaringan Nasional</span>
+          <h2 class="section-title">Jaringan Cabang RS Awal Bros Group</h2>
+          <p class="section-subtitle">Tersebar di lokasi strategis wilayah Riau dan Kepulauan Riau untuk memberikan kemudahan akses kesehatan medis.</p>
+        </div>
+
+        <div class="branch-grid">
+
+          <div class="branch-card">
+            <span class="branch-badge">KOTA DUMAI</span>
+            <h3 class="branch-name">RS Awal Bros Dumai</h3>
+            <p class="branch-location">Jl. Jendral Sudirman No. 88, Kota Dumai, Riau 28812</p>
+            <span class="branch-link">Pusat Rujukan Dumai &rsaquo;</span>
+          </div>
+
+          <div class="branch-card">
+            <span class="branch-badge">PEKANBARU</span>
+            <h3 class="branch-name">RS Awal Bros Sudirman</h3>
+            <p class="branch-location">Jl. Jend. Sudirman No. 117, Pekanbaru, Riau 28128</p>
+            <span class="branch-link">Rumah Sakit Induk &rsaquo;</span>
+          </div>
+
+          <div class="branch-card">
+            <span class="branch-badge">PEKANBARU</span>
+            <h3 class="branch-name">RS Awal Bros Panam</h3>
+            <p class="branch-location">Jl. HR. Soebrantas No. 88, Tampan, Pekanbaru 28293</p>
+            <span class="branch-link">Cabang Panam &rsaquo;</span>
+          </div>
+
+          <div class="branch-card">
+            <span class="branch-badge">PEKANBARU</span>
+            <h3 class="branch-name">RS Awal Bros A. Yani</h3>
+            <p class="branch-location">Jl. Ahmad Yani No. 73, Pekanbaru, Riau 28115</p>
+            <span class="branch-link">Pusat Kardiovaskular &rsaquo;</span>
+          </div>
+
+          <div class="branch-card">
+            <span class="branch-badge">BATAM, KEPRI</span>
+            <h3 class="branch-name">RS Awal Bros Batam</h3>
+            <p class="branch-location">Jl. Gajah Mada No. 1, Baloi, Batam, Kepri 29432</p>
+            <span class="branch-link">Cabang Utama Batam &rsaquo;</span>
+          </div>
+
+          <div class="branch-card">
+            <span class="branch-badge">BATAM, KEPRI</span>
+            <h3 class="branch-name">RS Awal Bros Botania</h3>
+            <p class="branch-location">Jl. Botania Garden, Batam Center, Kepri 29464</p>
+            <span class="branch-link">Cabang Botania &rsaquo;</span>
+          </div>
+
+          <div class="branch-card">
+            <span class="branch-badge">ROKAN HULU</span>
+            <h3 class="branch-name">RS Awal Bros Ujung Batu</h3>
+            <p class="branch-location">Jl. Jend. Sudirman Ujung Batu, Rokan Hulu, Riau</p>
+            <span class="branch-link">Cabang Rokan Hulu &rsaquo;</span>
+          </div>
+
+          <div class="branch-card">
+            <span class="branch-badge">ROKAN HILIR</span>
+            <h3 class="branch-name">RS Awal Bros Bagan Batu</h3>
+            <p class="branch-location">Jl. Lintas Riau - Sumut, Bagan Batu, Rokan Hilir, Riau</p>
+            <span class="branch-link">Cabang Rokan Hilir &rsaquo;</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. PENCAPAIAN & AKREDITASII (VALID & VERIFIED) -->
+    <section class="section section-bg-light">
+      <div class="container">
+        <div class="section-header">
+          <span class="hero-tag">Sertifikasi & Mutu</span>
+          <h2 class="section-title">Pencapaian & Akreditasi Resmi</h2>
+          <p class="section-subtitle">Pengakuan mutu pelayanan medis dan keselamatan pasien dari lembaga independen nasional dan internasional.</p>
+        </div>
+
+        <div class="achievement-grid">
+
+          <div class="achievement-card">
+            <div class="achievement-icon-wrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01 1.056-.638.622a2.89 2.89 0 0 0 0 4.134l.638.622-.01 1.056a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.639a2.89 2.89 0 0 0 4.134 0l.622-.639.89.01a2.89 2.89 0 0 0 2.924-2.924l-.01-1.056.638-.622a2.89 2.89 0 0 0 0-4.134l-.638-.622.01-1.056a2.89 2.89 0 0 0-2.924-2.924l-.89.011-.622-.638zm.47 5.23a.75.75 0 0 1 .018 1.06L7.43 10.24a.75.75 0 0 1-1.08.02L4.62 8.53a.75.75 0 0 1 1.04-1.08l1.22 1.173 2.656-2.504a.75.75 0 0 1 1.06-.018z"/>
+              </svg>
+            </div>
+            <h3 class="achievement-title">Akreditasi Paripurna KARS</h3>
+            <p class="achievement-desc">Kelulusan tingkat tertinggi (*Bintang Lima*) dari Komisi Akreditasi Rumah Sakit Indonesia untuk kepatuhan standar mutu medis dan keselamatan pasien.</p>
+          </div>
+
+          <div class="achievement-card">
+            <div class="achievement-icon-wrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/>
+              </svg>
+            </div>
+            <h3 class="achievement-title">Standar Mutu JCI (Joint Commission)</h3>
+            <p class="achievement-desc">Penerapan protokol kesehatan global yang selaras dengan panduan penilaian internasional *Joint Commission International*.</p>
+          </div>
+
+          <div class="achievement-card">
+            <div class="achievement-icon-wrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+              </svg>
+            </div>
+            <h3 class="achievement-title">Penghargaan Innovator Healthcare</h3>
+            <p class="achievement-desc">Pemberian penghargaan sebagai rumah sakit pelopor efisiensi pendaftaran janji temu digital dan sistem rekam medis elektronik terintegrasi.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. CALL TO ACTION BANNER -->
+    <section class="section">
+      <div class="container">
+        <div class="cta-banner">
+          <div class="cta-content">
+            <h2>Percayakan Pelayanan Kesehatan Anda Pada Kami</h2>
+            <p>RS Awal Bros Dumai siap melayani Anda dan keluarga dengan sepenuh hati dan teknologi medis terdepan.</p>
+          </div>
+          <div class="cta-buttons">
+            <a href="janji-temu.html" class="btn-primary" style="background-color: #ffffff; color: var(--primary-mint) !important;">Daftar Janji Temu Online</a>
+            <a href="kontak.html" class="btn-outline" style="border-color: #ffffff; color: #ffffff;">Hubungi Customer Service</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Master Footer Placeholder -->
+  <div id="footer-placeholder">
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <h4>RS Awal Bros Dumai</h4>
+            <p style="margin-bottom: 1rem; font-size: 0.95rem; line-height: 1.6;">
+              Rumah sakit terkemuka berstandar internasional di Kota Dumai yang berkomitmen memberikan pelayanan kesehatan berkualitas, cepat, dan profesional bagi masyarakat.
+            </p>
+            <div style="display: flex; gap: 0.75rem;">
+              <span class="emergency-badge" style="display: inline-block;">Akreditasi Paripurna KARS</span>
+            </div>
+          </div>
+
+          <div class="footer-col">
+            <h4>Navigasi Utama</h4>
+            <ul class="footer-links">
+              <li><a href="index.html">Beranda</a></li>
+              <li><a href="tentang-kami.html">Tentang Kami</a></li>
+              <li><a href="layanan.html">Layanan</a></li>
+              <li><a href="dokter.html">Dokter Spesialis</a></li>
+              <li><a href="fasilitas.html">Fasilitas Medis</a></li>
+              <li><a href="janji-temu.html">Janji Temu Online</a></li>
+              <li><a href="kontak.html">Kontak & Lokasi</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Layanan Unggulan</h4>
+            <ul class="footer-links">
+              <li><a href="layanan.html">Instalasi Gawat Darurat (IGD 24/7)</a></li>
+              <li><a href="layanan.html">Poliklinik Spesialis</a></li>
+              <li><a href="layanan.html">Rawat Inap & ICU</a></li>
+              <li><a href="layanan.html">Laboratorium & Radiologi</a></li>
+              <li><a href="layanan.html">Medical Check Up (MCU)</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Kontak & Alamat</h4>
+            <div class="footer-contact-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="var(--primary-container)" viewBox="0 0 16 16" style="flex-shrink: 0; margin-top: 3px;">
+                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+              </svg>
+              <span>Jl. Jendral Sudirman No. 88, Kota Dumai, Riau 28812</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="var(--primary-container)" viewBox="0 0 16 16" style="flex-shrink: 0; margin-top: 3px;">
+                <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l.975-.978a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328z"/>
+              </svg>
+              <span>Emergency IGD: (0765) 38888<br>Call Center: (0765) 38889</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2026 RS Awal Bros Dumai. Hak Cipta Dilindungi Undang-Undang.</p>
+          <p style="font-size: 0.8rem; color: #9ca3af;">Corporate Style &bull; Pure Native Web</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Floating Action Button WhatsApp Customer Service -->
+  <a href="https://wa.me/6281234567890?text=Halo%20RS%20Awal%20Bros%20Dumai,%20saya%20ingin%20bertanya%20informasi%20layanan" class="fab-whatsapp" target="_blank" aria-label="Customer Service WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
+      <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.601 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.068-.315-.099-.448.099-.133.197-.513.646-.629.779-.116.133-.232.148-.43.05-.197-.099-.833-.307-1.587-.979-.587-.524-.984-1.171-1.1-1.368-.115-.198-.012-.305.086-.404.088-.088.197-.232.296-.347.099-.116.132-.197.197-.33.066-.133.033-.248-.017-.347-.05-.099-.448-1.08-.614-1.477-.161-.387-.326-.335-.448-.341l-.382-.007c-.133 0-.348.05-.53.248-.182.198-.696.68-.696 1.658 0 .979.712 1.925.812 2.057.099.133 1.402 2.14 3.397 3.001.475.205.846.328 1.135.42.477.152.911.13 1.254.079.383-.057 1.17-.478 1.335-.94.165-.463.165-.859.116-.94-.049-.082-.182-.132-.379-.231z"/>
+    </svg>
+  </a>
+
+  <!-- Component Loader JS & Main JS -->
+  <script src="../js/components.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>
