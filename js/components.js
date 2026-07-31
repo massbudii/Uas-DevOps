@@ -3,10 +3,11 @@
  * RS Awal Bros Dumai - Pure Native Web
  * 
  * Mendukung mode HTTP Server (fetch) & Local File System (file:// fallback)
- * Otomatis menyesuaikan path subfolder (folder content/)
+ * Safe untuk semua kondisi document.readyState & browser caching
  */
 
-function getNavbarTemplate() {
+function getNavbarTemplate(pathPrefix) {
+  const prefix = pathPrefix || '../';
   return `
 <div class="topbar">
   <div class="container">
@@ -49,8 +50,8 @@ function getNavbarTemplate() {
 <header class="header-navbar">
   <div class="container navbar-container">
     <a href="index.html" class="brand-logo-wrapper" aria-label="Beranda RS Awal Bros Dumai">
-      <img src="../assets/img/logo-banner.png" alt="RS Awal Bros Red Banner" class="navbar-logo-banner">
-      <img src="../assets/img/logo-rs-awalbros.png" alt="Logo Emblem RS Awal Bros" class="navbar-logo-img">
+      <img src="${prefix}assets/img/logo-rs-awalbros.png" alt="Logo Emblem RS Awal Bros" class="navbar-logo-img">
+      <img src="${prefix}assets/img/logo-banner.png" alt="RS Awal Bros Red Banner" class="navbar-logo-banner">
     </a>
 
     <button class="mobile-toggle" id="mobile-toggle-btn" aria-label="Toggle Menu">
@@ -170,15 +171,25 @@ function getFooterTemplate() {
 `;
 }
 
-// 2. Inisialisasi Pemuatan Komponen saat DOM Siap
-document.addEventListener('DOMContentLoaded', () => {
+/**
+ * Fungsi Utama Inisialisasi Komponen Navbar & Footer
+ * Menjamin 100% eksekusi pada semua kondisi document.readyState
+ */
+function initAppComponents() {
   const currentPath = window.location.pathname.replace(/\\/g, '/');
   const isSubfolder = currentPath.includes('/content/') || currentPath.endsWith('/content');
   const pathPrefix = isSubfolder ? '../' : '';
 
-  loadComponent('navbar-placeholder', pathPrefix + 'components/navbar.html', getNavbarTemplate(), initNavbar);
+  loadComponent('navbar-placeholder', pathPrefix + 'components/navbar.html', getNavbarTemplate(pathPrefix), initNavbar);
   loadComponent('footer-placeholder', pathPrefix + 'components/footer.html', getFooterTemplate());
-});
+}
+
+// Menangani kondisi jika event DOMContentLoaded sudah berlalu (browser caching / delayed script)
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initAppComponents);
+} else {
+  initAppComponents();
+}
 
 /**
  * Pemuat Komponen HTML Universal (HTTP Server & Local file:// Protocol Safe)
@@ -187,7 +198,7 @@ function loadComponent(placeholderId, componentPath, fallbackHtml, callback) {
   const placeholder = document.getElementById(placeholderId);
   if (!placeholder) return;
 
-  // Jika dibuka langsung via file:// (double-click di Windows Explorer), sertakan fallback secara langsung
+  // Jika dibuka langsung via file:// (double-click di Windows Explorer), langsung render template fallback
   if (window.location.protocol === 'file:') {
     if (fallbackHtml) {
       placeholder.innerHTML = fallbackHtml;
