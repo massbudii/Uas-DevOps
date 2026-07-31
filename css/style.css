@@ -187,7 +187,7 @@ img {
 }
 
 /* ------------------------------------------
-   4. Header & Sticky Navbar (Dual Logo Styling)
+   4. Header & Sticky Navbar
    ------------------------------------------ */
 #navbar-placeholder {
   position: sticky;
@@ -224,7 +224,6 @@ img {
   transform: translateY(-1px);
 }
 
-/* Ukuran Proporsional Logo RS Awal Bros */
 .navbar-logo-img {
   max-height: 44px;
   width: auto;
@@ -232,7 +231,6 @@ img {
   display: block;
 }
 
-/* Ukuran Proporsional Logo Banner */
 .navbar-logo-banner {
   max-height: 48px;
   width: auto;
@@ -627,7 +625,7 @@ main {
 }
 
 /* ------------------------------------------
-   8. Section Layouts & Components
+   8. Section Layouts & 6-Card Facilities Grid
    ------------------------------------------ */
 .section {
   padding: 5rem 0;
@@ -658,6 +656,129 @@ main {
   font-size: 1.05rem;
 }
 
+/* Facility 6-Card Grid Layout (Rapi & Bersih Tanpa Overlap Text) */
+.facility-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+}
+
+.facility-card {
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-color);
+  padding: 2rem;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.facility-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--primary-container);
+  background-color: #ffffff;
+}
+
+/* Top Icon Badge */
+.facility-badge-icon {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(0, 168, 143, 0.12);
+  color: var(--primary-mint);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+  transition: var(--transition);
+}
+
+.facility-card:hover .facility-badge-icon {
+  transform: scale(1.05);
+  background-color: var(--primary-mint);
+  color: #ffffff;
+}
+
+/* Category Small Tag */
+.facility-category-tag {
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--primary-container);
+  margin-bottom: 0.4rem;
+  display: block;
+}
+
+/* Card Title & Description */
+.facility-card-title {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--on-surface-text);
+  margin-bottom: 0.75rem;
+  line-height: 1.3;
+}
+
+.facility-card-desc {
+  color: var(--secondary-neutral);
+  font-size: 0.925rem;
+  line-height: 1.6;
+  margin-bottom: 1.75rem;
+}
+
+/* Footer Card Clean 2-Row Layout (Tidak Akan Bertabrakan/Overlap) */
+.facility-card-footer {
+  margin-top: auto;
+  padding-top: 1.15rem;
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.facility-schedule-text {
+  color: var(--primary-mint);
+  font-weight: 700;
+  font-size: 0.825rem;
+  line-height: 1.4;
+  background-color: rgba(0, 168, 143, 0.08);
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius-sm);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  width: fit-content;
+}
+
+.facility-action-row {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.facility-more-link {
+  color: var(--primary-mint);
+  font-weight: 700;
+  font-size: 0.875rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: var(--transition);
+  white-space: nowrap;
+}
+
+.facility-card:hover .facility-more-link {
+  color: var(--primary-container);
+  transform: translateX(3px);
+}
+
+/* ------------------------------------------
+   9. Feature Grid & Details
+   ------------------------------------------ */
 .split-feature-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -702,73 +823,8 @@ main {
   margin-top: 2px;
 }
 
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-}
-
-.card {
-  background-color: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(8px);
-  border-radius: var(--radius-md);
-  border: 1px solid var(--border-color);
-  padding: 2rem;
-  box-shadow: var(--shadow-sm);
-  transition: var(--transition);
-  display: flex;
-  flex-direction: column;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-lg);
-  border-color: var(--primary-container);
-  background-color: #ffffff;
-}
-
-.card-icon {
-  width: 52px;
-  height: 52px;
-  background-color: rgba(0, 168, 143, 0.1);
-  color: var(--primary-mint);
-  border-radius: var(--radius-md);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 1.25rem;
-}
-
-.card-title {
-  font-size: 1.25rem;
-  color: var(--primary-mint);
-  margin-bottom: 0.75rem;
-}
-
-.card-description {
-  color: var(--secondary-neutral);
-  font-size: 0.95rem;
-  line-height: 1.6;
-  margin-bottom: 1.5rem;
-}
-
-.card-link {
-  margin-top: auto;
-  color: var(--primary-container);
-  font-weight: 700;
-  font-size: 0.9rem;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-}
-
-.card-link:hover {
-  color: var(--primary-mint);
-  gap: 0.6rem;
-}
-
 /* ------------------------------------------
-   9. Interactive Health Risk Calculator Widget
+   10. Interactive Health Risk Calculator Widget
    ------------------------------------------ */
 .calculator-box {
   background-color: rgba(255, 255, 255, 0.94);
@@ -836,7 +892,7 @@ main {
 }
 
 /* ------------------------------------------
-   10. Call to Action Banner Section
+   11. Call to Action Banner Section
    ------------------------------------------ */
 .cta-banner {
   background: linear-gradient(135deg, var(--primary-mint) 0%, #004d41 100%);
@@ -870,7 +926,7 @@ main {
 }
 
 /* ------------------------------------------
-   11. Floating Action Button WhatsApp
+   12. Floating Action Button WhatsApp
    ------------------------------------------ */
 .fab-whatsapp {
   position: fixed;
@@ -895,7 +951,7 @@ main {
 }
 
 /* ------------------------------------------
-   12. Footer Component
+   13. Footer Component
    ------------------------------------------ */
 .site-footer {
   background-color: #121c1a;
@@ -972,9 +1028,14 @@ main {
 }
 
 /* ------------------------------------------
-   13. Responsive Breakpoints
+   14. Responsive Breakpoints
    ------------------------------------------ */
 @media (max-width: 991px) {
+  .facility-card-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
   .hero-grid,
   .split-feature-grid {
     grid-template-columns: 1fr;
@@ -1044,6 +1105,10 @@ main {
 }
 
 @media (max-width: 576px) {
+  .facility-card-grid {
+    grid-template-columns: 1fr;
+  }
+
   .brand-logo-wrapper {
     gap: 0.25rem;
     max-width: calc(100% - 50px);
