@@ -5,9 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RS Awal Bros Dumai - Pelayanan Kesehatan Berstandar Internasional</title>
   <meta name="description" content="Website Resmi RS Awal Bros Dumai. Layanan Kesehatan Paripurna 24 Jam, Dokter Spesialis Berpengalaman, Fasilitas Medis Terlengkap di Kota Dumai.">
+  <link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg">
+  <link rel="shortcut icon" type="image/svg+xml" href="../assets/img/favicon.svg">
+  <link rel="alternate icon" type="image/png" href="../assets/img/logo-rs-awalbros.png">
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+
+  <!-- Full-Page Particle Network Background Canvas (DESIGN.md) -->
+  <canvas id="particle-canvas"></canvas>
 
   <!-- Master Navbar Placeholder -->
   <div id="navbar-placeholder"></div>
@@ -17,9 +23,6 @@
     
     <!-- 1. HERO SECTION -->
     <section class="hero-section">
-      <!-- Particle Network Background Canvas (DESIGN.md) -->
-      <canvas id="particle-canvas"></canvas>
-
       <div class="container">
         <div class="hero-grid">
           <div class="hero-content">
@@ -29,7 +32,10 @@
               </svg>
               <span>Rumah Sakit Terakreditasi Paripurna KARS</span>
             </div>
-            <h1 class="hero-title">Pelayanan Kesehatan Berstandar Internasional dengan Sentuhan Kasih</h1>
+            <h1 class="hero-title">
+              <span class="hero-title-green">Pelayanan Kesehatan Berstandar Internasional</span>
+              <span class="hero-title-red">dengan Sentuhan Kasih</span>
+            </h1>
             <p class="hero-description">
               RS Awal Bros Dumai menghadirkan pusat layanan medis terpadu berbasis teknologi modern, didukung oleh tim dokter spesialis ternama untuk kesehatan optimal Anda dan keluarga.
             </p>
@@ -39,19 +45,19 @@
             </div>
             <div class="hero-stats">
               <div class="stat-item">
-                <h3>50+</h3>
+                <span class="counter-number" data-target="50" data-suffix="+">0+</span>
                 <p>Dokter Spesialis</p>
               </div>
               <div class="stat-item">
-                <h3>200+</h3>
+                <span class="counter-number" data-target="200" data-suffix="+">0+</span>
                 <p>Tempat Tidur</p>
               </div>
               <div class="stat-item">
-                <h3>24/7</h3>
+                <span class="counter-number glow-active" data-static="24/7">24/7</span>
                 <p>IGD Siaga</p>
               </div>
               <div class="stat-item">
-                <h3>98%</h3>
+                <span class="counter-number" data-target="98" data-suffix="%">0%</span>
                 <p>Kepuasan Pasien</p>
               </div>
             </div>
@@ -342,7 +348,7 @@
     </svg>
   </a>
 
-  <!-- Component Loader JS & Main JS (Relatif dari folder content/) -->
+  <!-- Component Loader JS & Main JS -->
   <script src="../js/components.js"></script>
   <script src="../js/main.js"></script>
 </body>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Circle Background -->
+  <circle cx="32" cy="32" r="30" fill="#ffffff"/>
+  <circle cx="32" cy="32" r="29" fill="none" stroke="#006b5a" stroke-width="3"/>
+  <circle cx="32" cy="32" r="25" fill="none" stroke="#00a88f" stroke-width="1.5"/>
+  
+  <!-- Medical Cross Symbol -->
+  <path d="M24 10h16v14h14v16H40v14H24V40H10V24h14V10z" fill="#006b5a"/>
+  
+  <!-- Red 'a' emblem in center -->
+  <circle cx="32" cy="32" r="8.5" fill="#ba1a1a"/>
+  <text x="32" y="37" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="13" fill="#ffffff" text-anchor="middle">a</text>
+</svg>

@@ -5,12 +5,13 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   initParticleNetwork();
+  initCorporateCounters();
   initHealthCalculator();
   initQuickAccessCards();
 });
 
 /**
- * 1. Connecting Dots / Particle Network Background Animation (Pure Native Canvas HTML5)
+ * 1. Full-Page Connecting Dots / Particle Network Background Animation (Dari Atas Hingga Atas Footer)
  */
 function initParticleNetwork() {
   const canvas = document.getElementById('particle-canvas');
@@ -18,20 +19,19 @@ function initParticleNetwork() {
 
   const context = canvas.getContext('2d');
   let particlesArray = [];
-  const numberOfParticles = 65;
-  const maxConnectDistance = 120;
+  const numberOfParticles = 90; // Diperbanyak agar tersebar merata di seluruh halaman
+  const maxConnectDistance = 135;
 
   const mousePosition = {
     x: null,
     y: null,
-    radius: 140
+    radius: 160
   };
 
-  // Set ukuran canvas sesuai kontainer hero
+  // Set ukuran canvas menutupi seluruh layar viewport
   function resizeCanvas() {
-    const heroSection = canvas.parentElement;
-    canvas.width = heroSection ? heroSection.clientWidth : window.innerWidth;
-    canvas.height = heroSection ? heroSection.clientHeight : 500;
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
   }
 
   resizeCanvas();
@@ -41,10 +41,10 @@ function initParticleNetwork() {
     createParticles();
   });
 
+  // Melacak koordinat kursor mouse di seluruh viewport layar
   window.addEventListener('mousemove', (event) => {
-    const canvasBounds = canvas.getBoundingClientRect();
-    mousePosition.x = event.clientX - canvasBounds.left;
-    mousePosition.y = event.clientY - canvasBounds.top;
+    mousePosition.x = event.clientX;
+    mousePosition.y = event.clientY;
   });
 
   window.addEventListener('mouseleave', () => {
@@ -52,7 +52,6 @@ function initParticleNetwork() {
     mousePosition.y = null;
   });
 
-  // Class Partikel Native
   class Particle {
     constructor(x, y, velocityX, velocityY, radius) {
       this.x = x;
@@ -77,7 +76,6 @@ function initParticleNetwork() {
         this.velocityY = -this.velocityY;
       }
 
-      // Interaksi kursor mouse
       if (mousePosition.x !== null && mousePosition.y !== null) {
         const deltaX = mousePosition.x - this.x;
         const deltaY = mousePosition.y - this.y;
@@ -154,7 +152,57 @@ function initParticleNetwork() {
 }
 
 /**
- * 2. Inisialisasi Kalkulator BMI Interaktif untuk Pengunjung
+ * 2. Corporate Counter Statistics Animated Count-Up (50+ Dokter, 200+ Bed, 98% Kepuasan)
+ */
+function initCorporateCounters() {
+  const counterElements = document.querySelectorAll('.counter-number[data-target]');
+  if (!counterElements.length) return;
+
+  const observerOptions = {
+    threshold: 0.3
+  };
+
+  const observer = new IntersectionObserver((entries, observerInstance) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const targetElement = entry.target;
+        const targetNumber = parseInt(targetElement.getAttribute('data-target'), 10);
+        const suffix = targetElement.getAttribute('data-suffix') || '';
+
+        animateCounterNumber(targetElement, 0, targetNumber, 1800, suffix);
+        observerInstance.unobserve(targetElement);
+      }
+    });
+  }, observerOptions);
+
+  counterElements.forEach(element => observer.observe(element));
+}
+
+function animateCounterNumber(element, startValue, endValue, durationMilliseconds, suffix) {
+  let startTime = null;
+
+  function updateCounter(currentTime) {
+    if (!startTime) startTime = currentTime;
+    const elapsedTime = currentTime - startTime;
+    const progress = Math.min(elapsedTime / durationMilliseconds, 1);
+    
+    const easeProgress = 1 - Math.pow(1 - progress, 3);
+    const currentValue = Math.floor(easeProgress * (endValue - startValue) + startValue);
+
+    element.textContent = currentValue + suffix;
+
+    if (progress < 1) {
+      requestAnimationFrame(updateCounter);
+    } else {
+      element.textContent = endValue + suffix;
+    }
+  }
+
+  requestAnimationFrame(updateCounter);
+}
+
+/**
+ * 3. Inisialisasi Kalkulator BMI Interaktif untuk Pengunjung
  */
 function initHealthCalculator() {
   const calculateButton = document.getElementById('btn-calculate-bmi');
@@ -217,7 +265,7 @@ function initHealthCalculator() {
 }
 
 /**
- * 3. Inisialisasi Kartu Akses Cepat (Quick Access Navigation)
+ * 4. Inisialisasi Kartu Akses Cepat (Quick Access Navigation)
  */
 function initQuickAccessCards() {
   const quickCards = document.querySelectorAll('.quick-card');
