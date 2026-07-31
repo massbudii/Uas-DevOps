@@ -406,7 +406,360 @@ main {
 }
 
 /* ------------------------------------------
-   6. Hero Section & Typography
+   6. Sub-page Banner & Breadcrumbs
+   ------------------------------------------ */
+.page-banner {
+  background: linear-gradient(135deg, #091c18 0%, #004d41 100%);
+  color: #ffffff;
+  padding: 3.5rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-banner h1 {
+  color: #ffffff;
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.breadcrumbs a {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.breadcrumbs a:hover {
+  color: var(--primary-container);
+}
+
+.breadcrumbs span.current {
+  color: var(--primary-container);
+  font-weight: 700;
+}
+
+/* ------------------------------------------
+   7. Profile Page Timeline (Sejarah)
+   ------------------------------------------ */
+.timeline-vertical {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.timeline-vertical::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 4px;
+  background: linear-gradient(180deg, var(--primary-container) 0%, var(--primary-mint) 100%);
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2.5rem;
+  width: 50%;
+  padding: 0 2rem;
+}
+
+.timeline-item:nth-child(odd) {
+  left: 0;
+  text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+  left: 50%;
+  text-align: left;
+}
+
+.timeline-dot {
+  position: absolute;
+  top: 1rem;
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  border: 4px solid var(--primary-container);
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 168, 143, 0.4);
+  z-index: 2;
+  transition: var(--transition);
+}
+
+.timeline-item:nth-child(odd) .timeline-dot {
+  right: -10px;
+}
+
+.timeline-item:nth-child(even) .timeline-dot {
+  left: -10px;
+}
+
+.timeline-content {
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  padding: 1.5rem 1.75rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-color);
+  transition: var(--transition);
+}
+
+.timeline-item:hover .timeline-content {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--primary-container);
+}
+
+.timeline-year {
+  display: inline-block;
+  background-color: var(--primary-mint);
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 0.85rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-full);
+  margin-bottom: 0.5rem;
+}
+
+.timeline-title {
+  font-size: 1.2rem;
+  color: var(--primary-mint);
+  margin-bottom: 0.5rem;
+}
+
+.timeline-desc {
+  font-size: 0.925rem;
+  color: var(--secondary-neutral);
+  line-height: 1.6;
+}
+
+/* ------------------------------------------
+   8. Vision & Mission Section
+   ------------------------------------------ */
+.vision-mission-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.vm-card {
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-color);
+  transition: var(--transition);
+
+}
+
+.vm-card:hover {
+  box-shadow: var(--shadow-lg);
+  border-color: var(--primary-container);
+}
+
+.vm-icon {
+  width: 56px;
+  height: 56px;
+  background-color: rgba(0, 168, 143, 0.12);
+  color: var(--primary-mint);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+}
+
+.vm-title {
+  font-size: 1.5rem;
+  color: var(--primary-mint);
+  margin-bottom: 1rem;
+}
+
+.vm-list {
+  list-style: none;
+}
+
+.vm-list li {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 0.85rem;
+  align-items: flex-start;
+  color: var(--secondary-neutral);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Nilai Budaya Perusahaan (KASIH) */
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+
+.value-card {
+  background-color: #ffffff;
+  border-radius: var(--radius-md);
+  padding: 1.5rem 1rem;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
+  transition: var(--transition);
+}
+
+.value-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--primary-container);
+}
+
+.value-letter {
+  font-size: 2.25rem;
+  font-weight: 900;
+  color: var(--primary-container);
+  line-height: 1;
+  margin-bottom: 0.35rem;
+}
+
+.value-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--primary-mint);
+  margin-bottom: 0.25rem;
+}
+
+.value-desc {
+  font-size: 0.8rem;
+  color: var(--secondary-neutral);
+}
+
+/* ------------------------------------------
+   9. Branches Grid (Cabang Jaringan)
+   ------------------------------------------ */
+.branch-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.branch-card {
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.branch-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--primary-container);
+}
+
+.branch-badge {
+  display: inline-block;
+  background-color: rgba(0, 168, 143, 0.1);
+  color: var(--primary-mint);
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-sm);
+  margin-bottom: 0.75rem;
+  width: fit-content;
+}
+
+.branch-name {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--on-surface-text);
+  margin-bottom: 0.5rem;
+}
+
+.branch-location {
+  font-size: 0.875rem;
+  color: var(--secondary-neutral);
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.branch-link {
+  margin-top: auto;
+  color: var(--primary-mint);
+  font-weight: 700;
+  font-size: 0.85rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+/* ------------------------------------------
+   10. Achievement Grid (Pencapaian & Akreditasi)
+   ------------------------------------------ */
+.achievement-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+}
+
+.achievement-card {
+  background-color: #ffffff;
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-color);
+  text-align: center;
+  transition: var(--transition);
+}
+
+.achievement-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--primary-container);
+}
+
+.achievement-icon-wrapper {
+  width: 64px;
+  height: 64px;
+  background: linear-gradient(135deg, rgba(0, 168, 143, 0.15) 0%, rgba(0, 107, 90, 0.15) 100%);
+  color: var(--primary-mint);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.25rem auto;
+}
+
+.achievement-title {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--primary-mint);
+  margin-bottom: 0.5rem;
+}
+
+.achievement-desc {
+  font-size: 0.9rem;
+  color: var(--secondary-neutral);
+  line-height: 1.6;
+}
+
+/* ------------------------------------------
+   11. Hero Section & Typography (Home)
    ------------------------------------------ */
 .hero-section {
   padding: 4.5rem 0 5.5rem 0;
@@ -565,7 +918,7 @@ main {
 }
 
 /* ------------------------------------------
-   7. Quick Access Bar (Interactive Cards)
+   12. Quick Access Bar
    ------------------------------------------ */
 .quick-access-section {
   margin-top: -2.5rem;
@@ -625,7 +978,7 @@ main {
 }
 
 /* ------------------------------------------
-   8. Section Layouts & 6-Card Facilities Grid
+   13. Section Layouts & 6-Card Facilities Grid
    ------------------------------------------ */
 .section {
   padding: 5rem 0;
@@ -656,7 +1009,6 @@ main {
   font-size: 1.05rem;
 }
 
-/* Facility 6-Card Grid Layout (Rapi & Bersih Tanpa Overlap Text) */
 .facility-card-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -683,7 +1035,6 @@ main {
   background-color: #ffffff;
 }
 
-/* Top Icon Badge */
 .facility-badge-icon {
   width: 50px;
   height: 50px;
@@ -703,7 +1054,6 @@ main {
   color: #ffffff;
 }
 
-/* Category Small Tag */
 .facility-category-tag {
   font-size: 0.75rem;
   font-weight: 800;
@@ -714,7 +1064,6 @@ main {
   display: block;
 }
 
-/* Card Title & Description */
 .facility-card-title {
   font-size: 1.3rem;
   font-weight: 800;
@@ -730,7 +1079,6 @@ main {
   margin-bottom: 1.75rem;
 }
 
-/* Footer Card Clean 2-Row Layout (Tidak Akan Bertabrakan/Overlap) */
 .facility-card-footer {
   margin-top: auto;
   padding-top: 1.15rem;
@@ -777,7 +1125,7 @@ main {
 }
 
 /* ------------------------------------------
-   9. Feature Grid & Details
+   14. Feature Grid & Details
    ------------------------------------------ */
 .split-feature-grid {
   display: grid;
@@ -824,7 +1172,7 @@ main {
 }
 
 /* ------------------------------------------
-   10. Interactive Health Risk Calculator Widget
+   15. Interactive Health Risk Calculator Widget
    ------------------------------------------ */
 .calculator-box {
   background-color: rgba(255, 255, 255, 0.94);
@@ -892,7 +1240,7 @@ main {
 }
 
 /* ------------------------------------------
-   11. Call to Action Banner Section
+   16. Call to Action Banner Section
    ------------------------------------------ */
 .cta-banner {
   background: linear-gradient(135deg, var(--primary-mint) 0%, #004d41 100%);
@@ -926,7 +1274,7 @@ main {
 }
 
 /* ------------------------------------------
-   12. Floating Action Button WhatsApp
+   17. Floating Action Button WhatsApp
    ------------------------------------------ */
 .fab-whatsapp {
   position: fixed;
@@ -951,7 +1299,7 @@ main {
 }
 
 /* ------------------------------------------
-   13. Footer Component
+   18. Footer Component
    ------------------------------------------ */
 .site-footer {
   background-color: #121c1a;
@@ -1028,12 +1376,42 @@ main {
 }
 
 /* ------------------------------------------
-   14. Responsive Breakpoints
+   19. Responsive Breakpoints
    ------------------------------------------ */
 @media (max-width: 991px) {
-  .facility-card-grid {
+  .facility-card-grid,
+  .achievement-grid,
+  .branch-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
+  }
+
+  .vision-mission-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .values-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .timeline-vertical::before {
+    left: 20px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    padding-left: 3rem;
+    padding-right: 0;
+    text-align: left !important;
+  }
+
+  .timeline-item:nth-child(even) {
+    left: 0;
+  }
+
+  .timeline-dot {
+    left: 10px !important;
+    right: auto !important;
   }
 
   .hero-grid,
@@ -1105,7 +1483,13 @@ main {
 }
 
 @media (max-width: 576px) {
-  .facility-card-grid {
+  .facility-card-grid,
+  .achievement-grid,
+  .branch-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .values-grid {
     grid-template-columns: 1fr;
   }
 
