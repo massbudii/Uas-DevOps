@@ -49,7 +49,8 @@ function getNavbarTemplate() {
 <header class="header-navbar">
   <div class="container navbar-container">
     <a href="index.html" class="brand-logo-wrapper" aria-label="Beranda RS Awal Bros Dumai">
-      <img src="../assets/img/logo-rs-awalbros.png" alt="Logo RS Awal Bros Dumai" class="navbar-logo-img">
+      <img src="../assets/img/logo-banner.png" alt="RS Awal Bros Red Banner" class="navbar-logo-banner">
+      <img src="../assets/img/logo-rs-awalbros.png" alt="Logo Emblem RS Awal Bros" class="navbar-logo-img">
     </a>
 
     <button class="mobile-toggle" id="mobile-toggle-btn" aria-label="Toggle Menu">
