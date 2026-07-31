@@ -1,44 +1,44 @@
 /* ==========================================
-   RS AWAL BROS DUMAI - DESIGN SYSTEM & STYLES
-   Mengacu pada DESIGN.md
+   RS AWAL BROS DUMAI - CORPORATE DESIGN SYSTEM
+   Mengacu pada DESIGN.md RULES (Competition Grade)
    ========================================== */
 
-/* 1. CSS Custom Properties / Color Palette & Tokens */
+/* ------------------------------------------
+   1. CSS Custom Properties & Design Tokens
+   ------------------------------------------ */
 :root {
-  /* Design System Color Tokens (DESIGN.md) */
+  /* Color Palette (DESIGN.md) */
   --primary-mint: #006b5a;        /* Header, Tombol Utama, Indikator Aktif */
   --primary-container: #00a88f;   /* Accent Segar, Tombol CTA, Badge */
   --surface-canvas: #fbf9f8;      /* Off-white Lembut & Hangat */
   --on-surface-text: #1b1c1c;     /* Teks Utama Kontras Tinggi (WCAG AA > 7:1) */
   --secondary-neutral: #5d5f5f;   /* Subtitle, Metadata, Teks Instruksional */
   --emergency-accent: #ba1a1a;    /* Merah Darurat IGD 24 Jam & Ambulans */
-  --whatsapp-green: #25D366;      /* Floating Action Button WA Customer Service */
+  --whatsapp-green: #25D366;      /* Floating Action Button WA */
 
-  /* Structural Aliases */
-  --primary-color: var(--primary-container);
-  --dark-accent: var(--primary-mint);
+  /* Structural Colors */
   --bg-main: #FFFFFF;
   --bg-light: var(--surface-canvas);
-  --text-dark: var(--on-surface-text);
-  --text-muted: var(--secondary-neutral);
-  --border-color: #e5e7eb;
-
-  /* Elevation & Shadows */
-  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.04);
-  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.05);
-  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.08);
+  --border-color: #e2e8f0;
+  
+  /* Shadows & Elevation */
+  --shadow-sm: 0 2px 5px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 6px 16px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 12px 28px rgba(0, 0, 0, 0.1);
 
   /* Radius & Transitions */
-  --radius-sm: 4px;
-  --radius-md: 8px;
-  --radius-lg: 12px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 18px;
   --radius-full: 9999px;
 
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   --font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
-/* 2. Reset & Base Typography */
+/* ------------------------------------------
+   2. Base & Reset
+   ------------------------------------------ */
 * {
   margin: 0;
   padding: 0;
@@ -64,12 +64,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
   letter-spacing: -0.025em;
   font-weight: 700;
-}
-
-.display-heading {
-  font-weight: 800;
-  letter-spacing: -0.035em;
-  line-height: 1.15;
+  color: var(--primary-mint);
 }
 
 a {
@@ -91,7 +86,9 @@ img {
   padding: 0 1.5rem;
 }
 
-/* 3. Topbar IGD 24 Jam */
+/* ------------------------------------------
+   3. Topbar IGD 24 Jam
+   ------------------------------------------ */
 .topbar {
   background-color: var(--primary-mint);
   color: #ffffff;
@@ -136,7 +133,9 @@ img {
   100% { opacity: 1; }
 }
 
-/* 4. Navbar Component */
+/* ------------------------------------------
+   4. Header & Navbar
+   ------------------------------------------ */
 .header-navbar {
   background-color: var(--bg-main);
   box-shadow: var(--shadow-sm);
@@ -173,7 +172,6 @@ img {
   font-size: 0.75rem;
   color: var(--secondary-neutral);
   font-weight: 500;
-  letter-spacing: 0;
   margin-top: 1px;
 }
 
@@ -209,10 +207,10 @@ img {
   border-radius: 2px;
 }
 
-.btn-appointment {
+.btn-primary {
   background-color: var(--primary-container);
   color: #ffffff !important;
-  padding: 0.65rem 1.35rem;
+  padding: 0.7rem 1.5rem;
   border-radius: var(--radius-md);
   font-weight: 600;
   font-size: 0.95rem;
@@ -221,20 +219,23 @@ img {
   gap: 0.5rem;
   transition: var(--transition);
   box-shadow: var(--shadow-sm);
+  border: none;
+  cursor: pointer;
 }
 
-.btn-appointment:hover {
+.btn-primary:hover {
   background-color: var(--primary-mint);
   transform: translateY(-2px);
   box-shadow: var(--shadow-md);
 }
 
-.btn-emergency {
-  background-color: var(--emergency-accent);
-  color: #ffffff !important;
-  padding: 0.65rem 1.35rem;
+.btn-outline {
+  background-color: transparent;
+  color: var(--primary-mint);
+  border: 2px solid var(--primary-mint);
+  padding: 0.65rem 1.45rem;
   border-radius: var(--radius-md);
-  font-weight: 700;
+  font-weight: 600;
   font-size: 0.95rem;
   display: inline-flex;
   align-items: center;
@@ -242,12 +243,31 @@ img {
   transition: var(--transition);
 }
 
+.btn-outline:hover {
+  background-color: var(--primary-mint);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.btn-emergency {
+  background-color: var(--emergency-accent);
+  color: #ffffff !important;
+  padding: 0.7rem 1.5rem;
+  border-radius: var(--radius-md);
+  font-weight: 700;
+  font-size: 0.95rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: var(--transition);
+  border: none;
+}
+
 .btn-emergency:hover {
   background-color: #931313;
   transform: translateY(-2px);
 }
 
-/* Mobile Toggle */
 .mobile-toggle {
   display: none;
   background: none;
@@ -257,7 +277,423 @@ img {
   cursor: pointer;
 }
 
-/* 5. Floating Action Button WhatsApp */
+/* ------------------------------------------
+   5. Hero Section (Corporate Style & Real Images)
+   ------------------------------------------ */
+.hero-section {
+  padding: 4rem 0 5rem 0;
+  background: linear-gradient(135deg, var(--surface-canvas) 0%, #ffffff 100%);
+  position: relative;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: rgba(0, 168, 143, 0.1);
+  color: var(--primary-mint);
+  padding: 0.4rem 0.9rem;
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+}
+
+.hero-title {
+  font-size: 2.85rem;
+  line-height: 1.18;
+  color: var(--primary-mint);
+  margin-bottom: 1.25rem;
+  font-weight: 800;
+}
+
+.hero-description {
+  font-size: 1.1rem;
+  color: var(--secondary-neutral);
+  margin-bottom: 2rem;
+  line-height: 1.7;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+
+.hero-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.stat-item h3 {
+  font-size: 1.6rem;
+  color: var(--primary-mint);
+  font-weight: 800;
+  margin-bottom: 0.2rem;
+}
+
+.stat-item p {
+  font-size: 0.8rem;
+  color: var(--secondary-neutral);
+  font-weight: 600;
+}
+
+.hero-image-frame {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  border: 4px solid #ffffff;
+}
+
+.hero-image-frame img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.hero-image-frame:hover img {
+  transform: scale(1.03);
+}
+
+.hero-overlay-badge {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  right: 1.5rem;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 1.25rem;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.hero-badge-icon {
+  width: 44px;
+  height: 44px;
+  background-color: var(--primary-mint);
+  color: #ffffff;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* ------------------------------------------
+   6. Quick Access Bar (Interactive Cards)
+   ------------------------------------------ */
+.quick-access-section {
+  margin-top: -2.5rem;
+  position: relative;
+  z-index: 10;
+  margin-bottom: 3rem;
+}
+
+.quick-access-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+}
+
+.quick-card {
+  background-color: #ffffff;
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.quick-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--primary-container);
+}
+
+.quick-icon {
+  width: 48px;
+  height: 48px;
+  background-color: rgba(0, 168, 143, 0.1);
+  color: var(--primary-mint);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.quick-card h4 {
+  font-size: 1rem;
+  color: var(--primary-mint);
+  margin-bottom: 0.2rem;
+}
+
+.quick-card p {
+  font-size: 0.8rem;
+  color: var(--secondary-neutral);
+}
+
+/* ------------------------------------------
+   7. Section Layouts & Components
+   ------------------------------------------ */
+.section {
+  padding: 5rem 0;
+}
+
+.section-bg-light {
+  background-color: var(--surface-canvas);
+}
+
+.section-header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 3.5rem auto;
+}
+
+.section-title {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: var(--primary-mint);
+  margin-bottom: 0.75rem;
+}
+
+.section-subtitle {
+  color: var(--secondary-neutral);
+  font-size: 1.05rem;
+}
+
+/* Feature Grid 2 Columns */
+.split-feature-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+.feature-image-wrapper {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.feature-image-wrapper img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+}
+
+.feature-list {
+  list-style: none;
+  margin-top: 1.5rem;
+}
+
+.feature-list-item {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+  align-items: flex-start;
+}
+
+.feature-check-icon {
+  width: 24px;
+  height: 24px;
+  background-color: rgba(0, 168, 143, 0.15);
+  color: var(--primary-mint);
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* Card Grid Standard */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+  padding: 2rem;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--primary-container);
+}
+
+.card-icon {
+  width: 52px;
+  height: 52px;
+  background-color: rgba(0, 168, 143, 0.1);
+  color: var(--primary-mint);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  color: var(--primary-mint);
+  margin-bottom: 0.75rem;
+}
+
+.card-description {
+  color: var(--secondary-neutral);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.card-link {
+  margin-top: auto;
+  color: var(--primary-container);
+  font-weight: 700;
+  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.card-link:hover {
+  color: var(--primary-mint);
+  gap: 0.6rem;
+}
+
+/* ------------------------------------------
+   8. Interactive Health Risk Calculator Widget
+   ------------------------------------------ */
+.calculator-box {
+  background-color: #ffffff;
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-color);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.calculator-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--on-surface-text);
+}
+
+.form-control {
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  font-family: inherit;
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--primary-container);
+  box-shadow: 0 0 0 3px rgba(0, 168, 143, 0.15);
+}
+
+.calculator-result {
+  display: none;
+  margin-top: 1.5rem;
+  padding: 1.25rem;
+  background-color: var(--surface-canvas);
+  border-radius: var(--radius-md);
+  border-left: 4px solid var(--primary-container);
+}
+
+.calculator-result.active {
+  display: block;
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ------------------------------------------
+   9. Call to Action Banner Section
+   ------------------------------------------ */
+.cta-banner {
+  background: linear-gradient(135deg, var(--primary-mint) 0%, #004d41 100%);
+  color: #ffffff;
+  border-radius: var(--radius-lg);
+  padding: 3.5rem 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  box-shadow: var(--shadow-lg);
+}
+
+.cta-content h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+}
+
+.cta-content p {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.05rem;
+  max-width: 600px;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* ------------------------------------------
+   10. Floating Action Button WhatsApp
+   ------------------------------------------ */
 .fab-whatsapp {
   position: fixed;
   bottom: 2rem;
@@ -270,21 +706,23 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.4);
   z-index: 9999;
   transition: var(--transition);
 }
 
 .fab-whatsapp:hover {
   transform: scale(1.1);
-  box-shadow: 0 6px 16px rgba(37, 211, 102, 0.6);
+  box-shadow: 0 8px 20px rgba(37, 211, 102, 0.6);
 }
 
-/* 6. Footer Component */
+/* ------------------------------------------
+   11. Footer Component
+   ------------------------------------------ */
 .site-footer {
   background-color: #121c1a;
   color: #d1d5db;
-  padding-top: 4rem;
+  padding-top: 4.5rem;
   padding-bottom: 2rem;
   margin-top: auto;
 }
@@ -293,7 +731,7 @@ img {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 2.5rem;
-  margin-bottom: 3rem;
+  margin-bottom: 3.5rem;
 }
 
 .footer-col h4 {
@@ -344,7 +782,7 @@ img {
 
 .footer-bottom {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
-  padding-top: 1.5rem;
+  padding-top: 1.75rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -353,48 +791,20 @@ img {
   font-size: 0.875rem;
 }
 
-/* 7. Utility Section & Card Specs (DESIGN.md) */
-.section {
-  padding: 4.5rem 0;
-}
-
-.section-bg-light {
-  background-color: var(--surface-canvas);
-}
-
-.section-title {
-  font-size: 2.25rem;
-  font-weight: 800;
-  color: var(--primary-mint);
-  text-align: center;
-  margin-bottom: 0.5rem;
-  letter-spacing: -0.03em;
-}
-
-.section-subtitle {
-  text-align: center;
-  color: var(--secondary-neutral);
-  max-width: 640px;
-  margin: 0 auto 3rem auto;
-  font-size: 1rem;
-}
-
-.card {
-  background-color: #ffffff;
-  border-radius: var(--radius-md);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-  border: 1px solid var(--border-color);
-  padding: 1.5rem;
-  transition: var(--transition);
-}
-
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-lg);
-}
-
-/* 8. Responsive Breakpoints */
+/* ------------------------------------------
+   12. Responsive Breakpoints
+   ------------------------------------------ */
 @media (max-width: 991px) {
+  .hero-grid,
+  .split-feature-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .hero-title {
+    font-size: 2.25rem;
+  }
+
   .nav-menu {
     position: fixed;
     top: 115px;
@@ -421,5 +831,19 @@ img {
   .topbar-info {
     font-size: 0.8rem;
     gap: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .calculator-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-banner {
+    padding: 2rem 1.5rem;
   }
 }
