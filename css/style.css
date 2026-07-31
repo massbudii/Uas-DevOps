@@ -981,6 +981,22 @@ main {
     gap: 2.5rem;
   }
 
+  .brand-logo-wrapper {
+    gap: 0.4rem;
+    max-width: calc(100% - 60px);
+  }
+
+  .navbar-logo-banner {
+    max-height: 34px;
+    max-width: 165px;
+    object-fit: contain;
+  }
+
+  .navbar-logo-img {
+    max-height: 32px;
+    object-fit: contain;
+  }
+
   .hero-title {
     font-size: 2.25rem;
   }
@@ -1021,10 +1037,27 @@ main {
 
   .mobile-toggle {
     display: block;
+    margin-left: auto;
+    flex-shrink: 0;
+    z-index: 10000;
   }
 }
 
 @media (max-width: 576px) {
+  .brand-logo-wrapper {
+    gap: 0.25rem;
+    max-width: calc(100% - 50px);
+  }
+
+  .navbar-logo-banner {
+    max-height: 26px;
+    max-width: 125px;
+  }
+
+  .navbar-logo-img {
+    max-height: 26px;
+  }
+
   .hero-stats {
     grid-template-columns: repeat(2, 1fr);
   }

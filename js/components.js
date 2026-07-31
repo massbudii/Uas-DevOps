@@ -62,6 +62,20 @@ function getNavbarTemplate() {
     <nav>
       <ul class="nav-menu" id="nav-menu-list">
         <li><a href="index.html" class="nav-link">Beranda</a></li>
+
+        <li class="nav-item-dropdown">
+          <a href="tentang-kami.html" class="nav-link">
+            Tentang Kami
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" viewBox="0 0 16 16" style="margin-left: 2px;">
+              <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+            </svg>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="profil.html" class="dropdown-link">Profil RS Awal Bros</a></li>
+            <li><a href="galeri.html" class="dropdown-link">Galeri Rumah Sakit</a></li>
+          </ul>
+        </li>
+
         <li><a href="layanan.html" class="nav-link">Layanan</a></li>
         <li><a href="dokter.html" class="nav-link">Dokter</a></li>
         <li><a href="fasilitas.html" class="nav-link">Fasilitas</a></li>
@@ -93,6 +107,7 @@ function getFooterTemplate() {
         <h4>Navigasi Utama</h4>
         <ul class="footer-links">
           <li><a href="index.html">Beranda</a></li>
+          <li><a href="tentang-kami.html">Tentang Kami</a></li>
           <li><a href="layanan.html">Layanan</a></li>
           <li><a href="dokter.html">Dokter Spesialis</a></li>
           <li><a href="fasilitas.html">Fasilitas Medis</a></li>
