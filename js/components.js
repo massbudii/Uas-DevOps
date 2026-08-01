@@ -77,23 +77,36 @@ function getNavbarTemplate(pathPrefix) {
           </ul>
         </li>
 
-        <li><a href="layanan.html" class="nav-link">Layanan</a></li>
+        <li class="nav-item-dropdown">
+          <a href="#" class="nav-link">
+            Layanan
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" viewBox="0 0 16 16" style="margin-left: 2px;">
+              <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+            </svg>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="layanan-tht.html" class="dropdown-link">Layanan THT</a></li>
+            <li><a href="layanan-mata.html" class="dropdown-link">Layanan Mata</a></li>
+            <li><a href="layanan-kanker.html" class="dropdown-link">Layanan Kanker</a></li>
+            <li><a href="layanan-jantung.html" class="dropdown-link">Layanan Jantung</a></li>
+            <li><a href="layanan-saraf.html" class="dropdown-link">Layanan Saraf</a></li>
+          </ul>
+        </li>
         <li><a href="dokter.html" class="nav-link">Dokter</a></li>
 
         <li class="nav-item-dropdown">
-          <a href="fasilitas.html" class="nav-link">
+          <a href="#" class="nav-link">
             Fasilitas
             <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" viewBox="0 0 16 16" style="margin-left: 2px;">
               <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
             </svg>
           </a>
           <ul class="dropdown-menu">
-            <li><a href="fasilitas.html#rawat-jalan" class="dropdown-link">Poliklinik Spesialis</a></li>
-            <li><a href="fasilitas.html#rawat-inap" class="dropdown-link">Layanan Rawat Inap</a></li>
-            <li><a href="fasilitas.html#penunjang-medis" class="dropdown-link">Laboratorium & Radiologi</a></li>
-            <li><a href="fasilitas.html#gawat-darurat" class="dropdown-link">IGD & Ambulans 24 Jam</a></li>
-            <li><a href="fasilitas.html#mcu" class="dropdown-link">Medical Check Up (MCU)</a></li>
-            <li><a href="fasilitas.html#cath-lab" class="dropdown-link">Pusat Jantung & Cath Lab</a></li>
+            <li><a href="poliklinikspesialis.html" class="dropdown-link">Poliklinik Spesialis</a></li>
+            <li><a href="layananrawatinap.html" class="dropdown-link">Layanan Rawat Inap</a></li>
+            <li><a href="laboratorium-radiologi.html" class="dropdown-link">Laboratorium & Radiologi</a></li>
+            <li><a href="igd-ambulans.html" class="dropdown-link">IGD & Ambulans 24 Jam</a></li>
+            <li><a href="medical-check-up.html" class="dropdown-link">Medical Check Up (MCU)</a></li>
           </ul>
         </li>
 

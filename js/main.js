@@ -10,6 +10,9 @@ document.addEventListener('DOMContentLoaded', () => {
   initQuickAccessCards();
   initGalleryFilter();
   initGalleryLightbox();
+  initDoctorFilter();
+  initAppointmentForm();
+  initContactForm();
 });
 
 /**
@@ -367,3 +370,206 @@ function initQuickAccessCards() {
     });
   });
 }
+
+/**
+ * 7. Inisialisasi Filter & Pencarian Dokter Spesialis (dokter.html)
+ */
+function initDoctorFilter() {
+  const searchInput = document.getElementById('search-doctor-input');
+  const specialtySelect = document.getElementById('filter-specialty-select');
+  const resetButton = document.getElementById('btn-reset-doctor-filter');
+  const doctorCards = document.querySelectorAll('.doctor-card');
+  const noDoctorBox = document.getElementById('no-doctor-found');
+
+  if (!doctorCards.length) return;
+
+  function filterDoctors() {
+    const searchQuery = searchInput ? searchInput.value.toLowerCase().trim() : '';
+    const selectedSpecialty = specialtySelect ? specialtySelect.value : 'all';
+    let visibleCount = 0;
+
+    doctorCards.forEach(card => {
+      const doctorName = card.getAttribute('data-name') || '';
+      const doctorSpecialty = card.getAttribute('data-specialty') || '';
+
+      const matchesSearch = !searchQuery || doctorName.includes(searchQuery) || doctorSpecialty.includes(searchQuery);
+      const matchesSpecialty = selectedSpecialty === 'all' || doctorSpecialty === selectedSpecialty;
+
+      if (matchesSearch && matchesSpecialty) {
+        card.style.display = 'flex';
+        card.style.animation = 'fadeIn 0.3s ease';
+        visibleCount++;
+      } else {
+        card.style.display = 'none';
+      }
+    });
+
+    if (noDoctorBox) {
+      noDoctorBox.style.display = visibleCount === 0 ? 'block' : 'none';
+    }
+  }
+
+  if (searchInput) {
+    searchInput.addEventListener('input', filterDoctors);
+  }
+  if (specialtySelect) {
+    specialtySelect.addEventListener('change', filterDoctors);
+  }
+
+  if (resetButton) {
+    resetButton.addEventListener('click', () => {
+      if (searchInput) searchInput.value = '';
+      if (specialtySelect) specialtySelect.value = 'all';
+      filterDoctors();
+    });
+  }
+}
+
+/**
+ * 8. Inisialisasi Form Pendaftaran Janji Temu Online (janji-temu.html)
+ */
+function initAppointmentForm() {
+  const appointmentForm = document.getElementById('appointment-booking-form');
+  const dateInput = document.getElementById('appointment-date');
+  const doctorSelect = document.getElementById('doctor-select');
+  const polyclinicSelect = document.getElementById('polyclinic-select');
+  const timeSlotButtons = document.querySelectorAll('.time-slot-btn');
+  
+  const modalOverlay = document.getElementById('booking-modal-overlay');
+  const closeModalBtn = document.getElementById('btn-close-booking-modal');
+
+  if (!appointmentForm) return;
+
+  // Set tanggal minimal hari ini
+  if (dateInput) {
+    const todayISO = new Date().toISOString().split('T')[0];
+    dateInput.min = todayISO;
+    dateInput.value = todayISO;
+  }
+
+  // Pre-select dokter jika ada query parameter ?dokter=... pada URL
+  const urlParams = new URLSearchParams(window.location.search);
+  const selectedDoctorParam = urlParams.get('dokter');
+  if (selectedDoctorParam && doctorSelect) {
+    for (let option of doctorSelect.options) {
+      if (option.value.toLowerCase().includes(selectedDoctorParam.toLowerCase()) || selectedDoctorParam.toLowerCase().includes(option.value.toLowerCase())) {
+        option.selected = true;
+        break;
+      }
+    }
+  }
+
+  // Sinkronisasi otomatis Poliklinik & Dokter yang dipilih
+  if (doctorSelect && polyclinicSelect) {
+    function syncPolyclinicFromDoctor() {
+      const selectedDoc = doctorSelect.value;
+      if (selectedDoc.includes('Sp.PD')) polyclinicSelect.value = 'penyakit-dalam';
+      else if (selectedDoc.includes('Sp.A')) polyclinicSelect.value = 'anak';
+      else if (selectedDoc.includes('Sp.JP')) polyclinicSelect.value = 'jantung';
+      else if (selectedDoc.includes('Sp.OG')) polyclinicSelect.value = 'kebidanan';
+      else if (selectedDoc.includes('Sp.B')) polyclinicSelect.value = 'bedah';
+      else if (selectedDoc.includes('Sp.N')) polyclinicSelect.value = 'saraf';
+      else if (selectedDoc.includes('Sp.M')) polyclinicSelect.value = 'mata';
+      else if (selectedDoc.includes('Sp.THT')) polyclinicSelect.value = 'tht';
+    }
+
+    if (doctorSelect.value) {
+      syncPolyclinicFromDoctor();
+    }
+
+    doctorSelect.addEventListener('change', syncPolyclinicFromDoctor);
+
+    polyclinicSelect.addEventListener('change', () => {
+      const selectedPoli = polyclinicSelect.value;
+      if (!selectedPoli) return;
+
+      for (let option of doctorSelect.options) {
+        if (selectedPoli === 'penyakit-dalam' && option.value.includes('Sp.PD')) option.selected = true;
+        else if (selectedPoli === 'anak' && option.value.includes('Sp.A')) option.selected = true;
+        else if (selectedPoli === 'jantung' && option.value.includes('Sp.JP')) option.selected = true;
+        else if (selectedPoli === 'kebidanan' && option.value.includes('Sp.OG')) option.selected = true;
+        else if (selectedPoli === 'bedah' && option.value.includes('Sp.B')) option.selected = true;
+        else if (selectedPoli === 'saraf' && option.value.includes('Sp.N')) option.selected = true;
+        else if (selectedPoli === 'mata' && option.value.includes('Sp.M')) option.selected = true;
+        else if (selectedPoli === 'tht' && option.value.includes('Sp.THT')) option.selected = true;
+      }
+    });
+  }
+
+  // Sesi jam kunjungan
+  let selectedTimeSlot = 'Pagi (08:00 - 11:00 WIB)';
+  timeSlotButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      timeSlotButtons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      selectedTimeSlot = btn.getAttribute('data-time') || btn.textContent;
+    });
+  });
+
+  // Submit Handler Form Janji Temu
+  appointmentForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    const patientName = document.getElementById('patient-fullname')?.value || 'Pasien';
+    const doctorName = doctorSelect?.value || 'Dokter Spesialis';
+    const bookingDate = dateInput?.value || 'Hari ini';
+    const paymentType = document.getElementById('payment-type')?.value || 'Umum';
+
+    // Format kode booking unik
+    const randomCode = 'AB-' + new Date().getFullYear() + String(new Date().getMonth() + 1).padStart(2, '0') + String(new Date().getDate()).padStart(2, '0') + '-' + Math.floor(1000 + Math.random() * 9000);
+
+    // Isi konten modal
+    const codeDisplay = document.getElementById('modal-booking-code');
+    const nameDisplay = document.getElementById('modal-patient-name');
+    const doctorDisplay = document.getElementById('modal-doctor-name');
+    const scheduleDisplay = document.getElementById('modal-schedule-info');
+    const paymentDisplay = document.getElementById('modal-payment-info');
+
+    if (codeDisplay) codeDisplay.textContent = randomCode;
+    if (nameDisplay) nameDisplay.textContent = patientName;
+    if (doctorDisplay) doctorDisplay.textContent = doctorName;
+    if (scheduleDisplay) scheduleDisplay.textContent = `${bookingDate} | ${selectedTimeSlot}`;
+    if (paymentDisplay) paymentDisplay.textContent = paymentType;
+
+    if (modalOverlay) {
+      modalOverlay.classList.add('active');
+    }
+  });
+
+  if (closeModalBtn && modalOverlay) {
+    closeModalBtn.addEventListener('click', () => {
+      modalOverlay.classList.remove('active');
+      appointmentForm.reset();
+      if (dateInput) {
+        dateInput.value = new Date().toISOString().split('T')[0];
+      }
+    });
+  }
+}
+
+/**
+ * 9. Inisialisasi Form Kontak & Pesan (kontak.html)
+ */
+function initContactForm() {
+  const contactForm = document.getElementById('contact-us-form');
+  const successAlert = document.getElementById('contact-success-alert');
+
+  if (!contactForm) return;
+
+  contactForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    if (successAlert) {
+      successAlert.style.display = 'block';
+      successAlert.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+
+    contactForm.reset();
+    setTimeout(() => {
+      if (successAlert) {
+        successAlert.style.animation = 'fadeOut 0.5s ease';
+      }
+    }, 5000);
+  });
+}
+
