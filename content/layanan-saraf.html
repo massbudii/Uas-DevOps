@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RS Awal Bros Dumai - Pelayanan Kesehatan Berstandar Internasional</title>
+    <meta name="description"
+        content="Website Resmi RS Awal Bros Dumai. Layanan Kesehatan Paripurna 24 Jam, Dokter Spesialis Berpengalaman, Fasilitas Medis Terlengkap di Kota Dumai.">
+    <link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg">
+    <link rel="shortcut icon" type="image/svg+xml" href="../assets/img/favicon.svg">
+    <link rel="alternate icon" type="image/png" href="../assets/img/logo-rs-awalbros.png">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <!-- Full-Page Particle Network Background Canvas (DESIGN.md) -->
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- Master Navbar Placeholder (Pre-rendered for 100% Fail-safe Static Visibility) -->
+    <div id="navbar-placeholder">
+        <div class="topbar">
+            <div class="container">
+                <div class="topbar-ticker-wrapper">
+                    <div class="topbar-ticker-track">
+                        <div class="topbar-item">
+                            <span class="emergency-badge neon-badge">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                                    viewBox="0 0 16 16" class="ambulance-icon">
+                                    <path
+                                        d="M4.5 11a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm7 0a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z" />
+                                    <path
+                                        d="M0 1.5A1.5 1.5 0 0 1 1.5 0h9A1.5 1.5 0 0 1 12 1.5V3h1.365a1.5 1.5 0 0 1 1.258.683l1.17 1.756A1.5 1.5 0 0 1 16 6.324V11.5a1.5 1.5 0 0 1-1.5 1.5h-.5a2.5 2.5 0 0 1-5 0h-2a2.5 2.5 0 0 1-5 0H1.5A1.5 1.5 0 0 1 0 11.5v-10zM10.5 4V1.5a.5.5 0 0 0-.5-.5H1.5a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h.5a2.5 2.5 0 0 1 4.5 0h2a2.5 2.5 0 0 1 4.5 0h.5a.5.5 0 0 0 .5-.5V6.324a.5.5 0 0 0-.077-.268L12.8 4.3a.5.5 0 0 0-.419-.228H10.5z" />
+                                    <path d="M7 4h1.5v1.5H10V7H8.5v1.5H7V7H5.5V5.5H7V4z" />
+                                </svg>
+                                IGD 24 JAM
+                            </span>
+                        </div>
+                        <div class="topbar-item highlight-phone">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                                viewBox="0 0 16 16">
+                                <path
+                                    d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l.975-.978a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328z" />
+                            </svg>
+                            <span>Call Center Emergency: <strong>(0765) 38888</strong></span>
+                        </div>
+                        <div class="topbar-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                                viewBox="0 0 16 16">
+                                <path
+                                    d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                            </svg>
+                            <span>Jl. Jend. Sudirman No. 88, Dumai, Riau</span>
+                        </div>
+                        <div class="topbar-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                                viewBox="0 0 16 16">
+                                <path
+                                    d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
+                                <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
+                            </svg>
+                            <span>Jam Operasional: <strong>24 Jam Setiap Hari</strong></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <header class="header-navbar">
+            <div class="container navbar-container">
+                <a href="index.html" class="brand-logo-wrapper" aria-label="Beranda RS Awal Bros Dumai">
+                    <img src="../assets/img/logo-rs-awalbros.png" alt="Logo Emblem RS Awal Bros"
+                        class="navbar-logo-img">
+                    <img src="../assets/img/logo-banner.png" alt="RS Awal Bros Red Banner" class="navbar-logo-banner">
+                </a>
+
+                <button class="mobile-toggle" id="mobile-toggle-btn" aria-label="Toggle Menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+
+                <nav>
+                    <ul class="nav-menu" id="nav-menu-list">
+                        <li><a href="index.html" class="nav-link active">Beranda</a></li>
+
+                        <li class="nav-item-dropdown">
+                            <a href="tentang-kami.html" class="nav-link">
+                                Tentang Kami
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor"
+                                    viewBox="0 0 16 16" style="margin-left: 2px;">
+                                    <path fill-rule="evenodd"
+                                        d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                                </svg>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="profil.html" class="dropdown-link">Profil RS Awal Bros</a></li>
+                                <li><a href="galeri.html" class="dropdown-link">Galeri Rumah Sakit</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="layanan.html" class="nav-link">Layanan</a></li>
+                        <li><a href="dokter.html" class="nav-link">Dokter</a></li>
+
+                        <li class="nav-item-dropdown">
+                            <a href="fasilitas.html" class="nav-link">
+                                Fasilitas
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor"
+                                    viewBox="0 0 16 16" style="margin-left: 2px;">
+                                    <path fill-rule="evenodd"
+                                        d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                                </svg>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="fasilitas.html#rawat-jalan" class="dropdown-link">Poliklinik Spesialis</a>
+                                </li>
+                                <li><a href="fasilitas.html#rawat-inap" class="dropdown-link">Layanan Rawat Inap</a>
+                                </li>
+                                <li><a href="fasilitas.html#penunjang-medis" class="dropdown-link">Laboratorium &
+                                        Radiologi</a></li>
+                                <li><a href="fasilitas.html#gawat-darurat" class="dropdown-link">IGD & Ambulans 24
+                                        Jam</a></li>
+                                <li><a href="fasilitas.html#mcu" class="dropdown-link">Medical Check Up (MCU)</a></li>
+                                <li><a href="fasilitas.html#cath-lab" class="dropdown-link">Pusat Jantung & Cath Lab</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li><a href="janji-temu.html" class="nav-link">Janji Temu</a></li>
+                        <li><a href="kontak.html" class="nav-link">Kontak</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    </div>
+
+    <!-- Main Content Structure (Semantic HTML & Layout Guidelines DESIGN.md) -->
+    <main>
+
+        <section class="page-banner">
+            <div class="container">
+                <h1>Layanan Saraf</h1>
+                <div class="breadcrumbs">
+                    <a href="index.html">Beranda</a>
+                    <span>&rsaquo;</span>
+                    <span>Layanan</span>
+                    <span>&rsaquo;</span>
+                    <span class="current">Layanan Saraf</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 1. HERO SECTION — Poli THT (Blog/Artikel Style) -->
+        <section class="poli-hero-section">
+            <div class="container">
+
+                <!-- Two-Column Hero Grid: Text (left) + Image (right) -->
+                <div class="poli-hero-grid">
+
+                    <!-- Left Column: Article Content -->
+                    <div class="poli-hero-content">
+
+                        <!-- Department Badge -->
+                        <div class="poli-hero-badge-row">
+                            <span class="poli-dept-badge">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor"
+                                    viewBox="0 0 16 16" aria-hidden="true">
+                                    <path d="M8 1a5 5 0 1 0 0 10A5 5 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z" />
+                                    <path
+                                        d="M5 6.25a2.25 2.25 0 0 1 4.5 0v.5a.75.75 0 0 1-1.5 0v-.5a.75.75 0 0 0-1.5 0v.5a.75.75 0 0 1-1.5 0v-.5zm4.5 1.5h-3a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1z" />
+                                </svg>
+                                Poliklinik Spesialis Saraf
+                            </span>
+                            <span class="poli-schedule-badge">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor"
+                                    viewBox="0 0 16 16" aria-hidden="true">
+                                    <path
+                                        d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
+                                    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
+                                </svg>
+                                Senin – Sabtu: 08:00 – 20:00 WIB
+                            </span>
+                        </div>
+
+                        <!-- Main Heading -->
+                        <h1 class="poli-hero-title">
+                            Spesialis Saraf
+                            <span class="poli-hero-title-accent">Terpercaya di Kota Dumai</span>
+                        </h1>
+
+                        <!-- Lead Paragraph -->
+                        <p class="poli-hero-description">
+                            RS Awal Bros menghadirkan layanan Dokter Saraf & Stroke Center terpadu yang didukung oleh tim multidisiplin dan fasilitas diagnostik modern. Dengan pendekatan berbasis evidence-based medicine serta sistem perawatan terstruktur mulai dari fase akut hingga rehabilitasi, kami berkomitmen memberikan penanganan yang cepat, aman, dan berorientasi pada hasil klinis optimal bagi masyarakat di Provinsi Riau dan Kepulauan Riau.
+                        </p>
+
+                        <!-- Condition Tags -->
+                        <div class="poli-condition-tags">
+                            <span class="poli-condition-tag">Stroke Center</span>
+                            <span class="poli-condition-tag">Pain Center</span>
+                            <span class="poli-condition-tag">Memory Clinic</span>
+                        </div>
+
+                        <!-- Key Features List -->
+                        <ul class="poli-feature-list">
+                            <li class="poli-feature-item">
+                                <div class="poli-feature-check">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor"
+                                        viewBox="0 0 16 16" aria-hidden="true">
+                                        <path
+                                            d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
+                                    </svg>
+                                </div>
+                                <span>Dokter Spesialis Saraf</span>
+                            </li>
+                            <li class="poli-feature-item">
+                                <div class="poli-feature-check">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor"
+                                        viewBox="0 0 16 16" aria-hidden="true">
+                                        <path
+                                            d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
+                                    </svg>
+                                </div>
+                                <span>Dokter Spesialis Bedah Saraf</span>
+                            </li>
+                            <li class="poli-feature-item">
+                                <div class="poli-feature-check">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor"
+                                        viewBox="0 0 16 16" aria-hidden="true">
+                                        <path
+                                            d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
+                                    </svg>
+                                </div>
+                                <span>Dokter Spesialis Rehabilitasi Medik</span>
+                            </li>
+                            <li class="poli-feature-item">
+                                <div class="poli-feature-check">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor"
+                                        viewBox="0 0 16 16" aria-hidden="true">
+                                        <path
+                                            d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
+                                    </svg>
+                                </div>
+                                <span>Dokter Spesialis Akupunktur Medik</span>
+                            </li>
+                            <li class="poli-feature-item">
+                                <div class="poli-feature-check">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor"
+                                        viewBox="0 0 16 16" aria-hidden="true">
+                                        <path
+                                            d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
+                                    </svg>
+                                </div>
+                                <span>Dokter Spesialis Gizi Klinik</span>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                    <!-- Right Column: Image Frame -->
+                    <div class="poli-hero-image-frame">
+
+                        <!-- Decorative Accent Ring -->
+                        <div class="poli-image-ring" aria-hidden="true"></div>
+
+                        <!-- Main Image -->
+                        <div class="poli-image-wrapper">
+                            <img src="../assets/img/saraf.jpg" alt="Tim Dokter Spesialis THT RS Awal Bros Dumai"
+                                width="560" height="420" loading="eager">
+
+                            <!-- Floating: Accreditation Badge -->
+                            <div class="poli-float-badge poli-float-badge--top">
+                                <div class="poli-float-badge-icon poli-float-badge-icon--green">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                                        viewBox="0 0 16 16" aria-hidden="true">
+                                        <path
+                                            d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01 1.056-.638.622a2.89 2.89 0 0 0 0 4.134l.638.622-.01 1.056a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.639a2.89 2.89 0 0 0 4.134 0l.622-.639.89.01a2.89 2.89 0 0 0 2.924-2.924l-.01-1.056.638-.622a2.89 2.89 0 0 0 0-4.134l-.638-.622.01-1.056a2.89 2.89 0 0 0-2.924-2.924l-.89.011-.622-.638zm.47 5.23a.75.75 0 0 1 .018 1.06L7.43 10.24a.75.75 0 0 1-1.08.02L4.62 8.53a.75.75 0 0 1 1.04-1.08l1.22 1.173 2.656-2.504a.75.75 0 0 1 1.06-.018z" />
+                                    </svg>
+                                </div>
+                                <div class="poli-float-badge-text">
+                                    <strong>Akreditasi Paripurna</strong>
+                                    <span>KARS Nasional</span>
+                                </div>
+                            </div>
+
+                            <!-- Floating: Schedule Info Badge -->
+                            <div class="poli-float-badge poli-float-badge--bottom">
+                                <div class="poli-float-badge-icon poli-float-badge-icon--teal">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                                        viewBox="0 0 16 16" aria-hidden="true">
+                                        <path
+                                            d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
+                                        <path
+                                            d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
+                                    </svg>
+                                </div>
+                                <div class="poli-float-badge-text">
+                                    <strong>Jadwal Layanan Saraf</strong>
+                                    <span>Senin – Sabtu, 08:00 – 20:00</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. QUICK ACCESS BAR (Interactive Cards) -->
+        <div class="quick-access-section">
+            <div class="container">
+                <div class="quick-access-grid">
+                    <div class="quick-card" data-target="dokter.html">
+                        <div class="quick-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                viewBox="0 0 16 16">
+                                <path
+                                    d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h4>Jadwal Dokter</h4>
+                            <p>Cek ketersediaan spesialis</p>
+                        </div>
+                    </div>
+
+                    <div class="quick-card" data-target="janji-temu.html">
+                        <div class="quick-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                viewBox="0 0 16 16">
+                                <path
+                                    d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h4>Janji Temu Online</h4>
+                            <p>Daftar tanpa perlu antre</p>
+                        </div>
+                    </div>
+
+                    <div class="quick-card" data-target="layanan.html">
+                        <div class="quick-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                viewBox="0 0 16 16">
+                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                <path
+                                    d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3.5A.5.5 0 0 1 8 8V4.5A.5.5 0 0 1 8 4z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h4>Cek Risiko Kesehatan</h4>
+                            <p>Layanan konsultasi medis online</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+
+
+
+    </main>
+
+    <!-- Master Footer Placeholder (Pre-rendered for 100% Fail-safe Static Visibility) -->
+    <div id="footer-placeholder">
+        <footer class="site-footer">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-col">
+                        <h4>RS Awal Bros Dumai</h4>
+                        <p style="margin-bottom: 1rem; font-size: 0.95rem; line-height: 1.6;">
+                            Rumah sakit terkemuka berstandar internasional di Kota Dumai yang berkomitmen memberikan
+                            pelayanan kesehatan berkualitas, cepat, dan profesional bagi masyarakat.
+                        </p>
+                        <div style="display: flex; gap: 0.75rem;">
+                            <span class="emergency-badge" style="display: inline-block;">Akreditasi Paripurna
+                                KARS</span>
+                        </div>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4>Navigasi Utama</h4>
+                        <ul class="footer-links">
+                            <li><a href="index.html">Beranda</a></li>
+                            <li><a href="tentang-kami.html">Tentang Kami</a></li>
+                            <li><a href="layanan.html">Layanan</a></li>
+                            <li><a href="dokter.html">Dokter Spesialis</a></li>
+                            <li><a href="fasilitas.html">Fasilitas Medis</a></li>
+                            <li><a href="janji-temu.html">Janji Temu Online</a></li>
+                            <li><a href="kontak.html">Kontak & Lokasi</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4>Layanan Unggulan</h4>
+                        <ul class="footer-links">
+                            <li><a href="layanan.html">Instalasi Gawat Darurat (IGD 24/7)</a></li>
+                            <li><a href="layanan.html">Poliklinik Spesialis</a></li>
+                            <li><a href="layanan.html">Rawat Inap & ICU</a></li>
+                            <li><a href="layanan.html">Laboratorium & Radiologi</a></li>
+                            <li><a href="layanan.html">Medical Check Up (MCU)</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4>Kontak & Alamat</h4>
+                        <div class="footer-contact-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                fill="var(--primary-container)" viewBox="0 0 16 16"
+                                style="flex-shrink: 0; margin-top: 3px;">
+                                <path
+                                    d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                            </svg>
+                            <span>Jl. Jendral Sudirman No. 88, Kota Dumai, Riau 28812</span>
+                        </div>
+                        <div class="footer-contact-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                fill="var(--primary-container)" viewBox="0 0 16 16"
+                                style="flex-shrink: 0; margin-top: 3px;">
+                                <path
+                                    d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l.975-.978a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328z" />
+                            </svg>
+                            <span>Emergency IGD: (0765) 38888<br>Call Center: (0765) 38889</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <p>&copy; 2026 RS Awal Bros Dumai. Hak Cipta Dilindungi Undang-Undang.</p>
+                    <p style="font-size: 0.8rem; color: #9ca3af;">Corporate Style &bull; Pure Native Web</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Floating Action Button WhatsApp Customer Service (DESIGN.md) -->
+    <a href="https://wa.me/6281234567890?text=Halo%20RS%20Awal%20Bros%20Dumai,%20saya%20ingin%20bertanya%20informasi%20layanan"
+        class="fab-whatsapp" target="_blank" aria-label="Customer Service WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
+            <path
+                d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.601 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.068-.315-.099-.448.099-.133.197-.513.646-.629.779-.116.133-.232.148-.43.05-.197-.099-.833-.307-1.587-.979-.587-.524-.984-1.171-1.1-1.368-.115-.198-.012-.305.086-.404.088-.088.197-.232.296-.347.099-.116.132-.197.197-.33.066-.133.033-.248-.017-.347-.05-.099-.448-1.08-.614-1.477-.161-.387-.326-.335-.448-.341l-.382-.007c-.133 0-.348.05-.53.248-.182.198-.696.68-.696 1.658 0 .979.712 1.925.812 2.057.099.133 1.402 2.14 3.397 3.001.475.205.846.328 1.135.42.477.152.911.13 1.254.079.383-.057 1.17-.478 1.335-.94.165-.463.165-.859.116-.94-.049-.082-.182-.132-.379-.231z" />
+        </svg>
+    </a>
+
+    <!-- Component Loader JS & Main JS -->
+    <script src="../js/components.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>
