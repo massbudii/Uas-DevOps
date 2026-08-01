@@ -2127,3 +2127,444 @@ main {
     text-align: center;
   }
 }
+
+/* ------------------------------------------
+   XXI. THT Coverage & Diagnostic Section
+   ------------------------------------------ */
+
+/* Outer wrapper — no padding, sections handle their own */
+.tht-coverage-section {
+  overflow: hidden;
+}
+
+/* ---- TOP PANEL: Dark Gradient Header ---- */
+.tht-coverage-header {
+  background: linear-gradient(135deg, #091c18 0%, #004d41 60%, #006b5a 100%);
+  padding: 4rem 0 3.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative circle blobs */
+.tht-coverage-header::before,
+.tht-coverage-header::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.tht-coverage-header::before {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(0, 168, 143, 0.12) 0%, transparent 70%);
+  top: -100px;
+  right: -80px;
+}
+
+.tht-coverage-header::after {
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.04) 0%, transparent 70%);
+  bottom: -60px;
+  left: 5%;
+}
+
+.tht-coverage-header-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 780px;
+}
+
+/* Location label pill */
+.tht-coverage-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--primary-container);
+  background-color: rgba(0, 168, 143, 0.15);
+  border: 1px solid rgba(0, 168, 143, 0.3);
+  padding: 0.35rem 0.9rem;
+  border-radius: var(--radius-full);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+}
+
+/* Main headline */
+.tht-coverage-title {
+  font-size: clamp(1.7rem, 3vw, 2.4rem);
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: -0.03em;
+  color: #ffffff;
+  margin: 0 0 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.tht-coverage-title-highlight {
+  color: var(--primary-container);
+  font-size: 0.85em;
+}
+
+/* Lead description */
+.tht-coverage-desc {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1rem;
+  line-height: 1.75;
+  margin-bottom: 2rem;
+}
+
+/* Location chips row */
+.tht-location-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.tht-location-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0.4rem 0.9rem;
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: var(--transition);
+  cursor: default;
+}
+
+.tht-location-chip:hover {
+  background-color: rgba(0, 168, 143, 0.25);
+  border-color: var(--primary-container);
+  color: #ffffff;
+}
+
+/* ---- BOTTOM PANEL: White Body ---- */
+.tht-coverage-body {
+  background-color: var(--surface-canvas);
+  padding: 3rem 0 3.5rem;
+}
+
+/* ---- Specialist Type Row ---- */
+.tht-specialist-row {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.75rem;
+  padding: 1.25rem 1.5rem;
+  background-color: #ffffff;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+}
+
+.tht-specialist-card {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  flex: 1;
+  min-width: 220px;
+}
+
+.tht-specialist-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background-color: rgba(0, 107, 90, 0.08);
+  color: var(--primary-mint);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.tht-specialist-icon--red {
+  background-color: rgba(186, 26, 26, 0.08);
+  color: var(--emergency-accent);
+}
+
+.tht-specialist-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.tht-specialist-text strong {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--on-surface-text);
+  display: block;
+}
+
+.tht-specialist-text span {
+  font-size: 0.82rem;
+  color: var(--secondary-neutral);
+  display: block;
+}
+
+.tht-specialist-divider {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: var(--border-color);
+  flex-shrink: 0;
+}
+
+/* ---- Diagnostic Section Header ---- */
+.tht-diagnostic-header {
+  margin-bottom: 1.5rem;
+}
+
+.tht-diagnostic-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--primary-mint);
+  margin: 0 0 0.25rem;
+}
+
+.tht-diagnostic-subtitle {
+  font-size: 0.9rem;
+  color: var(--secondary-neutral);
+  margin: 0;
+}
+
+/* ---- Diagnostic Grid ---- */
+.tht-diagnostic-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+/* Base diagnostic card */
+.tht-diag-card {
+  background-color: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.4rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.tht-diag-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary-mint), var(--primary-container));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.tht-diag-card:hover {
+  border-color: var(--primary-container);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+}
+
+.tht-diag-card:hover::before {
+  transform: scaleX(1);
+}
+
+/* Featured card — spans full width of 5th column by taking 2 cols or just styled differently */
+.tht-diag-card--featured {
+  background: linear-gradient(135deg, var(--primary-mint) 0%, var(--primary-container) 100%);
+  border-color: transparent;
+  color: #ffffff;
+}
+
+.tht-diag-card--featured::before {
+  display: none;
+}
+
+.tht-diag-card--featured:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 107, 90, 0.3);
+  border-color: transparent;
+}
+
+/* Card icon */
+.tht-diag-card-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.tht-diag-icon--mint {
+  background-color: rgba(0, 107, 90, 0.1);
+  color: var(--primary-mint);
+}
+
+.tht-diag-icon--teal {
+  background-color: rgba(0, 168, 143, 0.1);
+  color: var(--primary-container);
+}
+
+.tht-diag-icon--white {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+
+/* Card body */
+.tht-diag-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  flex: 1;
+}
+
+.tht-diag-card-abbr {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--primary-container);
+}
+
+.tht-diag-card-abbr--white {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.tht-diag-card-name {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--on-surface-text);
+  line-height: 1.3;
+  margin: 0;
+}
+
+.tht-diag-card--featured .tht-diag-card-name {
+  color: #ffffff;
+}
+
+.tht-diag-card-desc {
+  font-size: 0.82rem;
+  color: var(--secondary-neutral);
+  line-height: 1.55;
+  margin: 0;
+}
+
+.tht-diag-card--featured .tht-diag-card-desc {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Featured tag badge */
+.tht-diag-card-featured-tag {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* ---- CTA Strip ---- */
+.tht-coverage-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  padding: 1.5rem 2rem;
+  background-color: #ffffff;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+}
+
+.tht-coverage-cta-text {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--on-surface-text);
+  margin: 0;
+}
+
+.tht-coverage-cta-actions {
+  display: flex;
+  gap: 0.85rem;
+  flex-wrap: wrap;
+}
+
+/* ---- Responsive: Tablet ---- */
+@media (max-width: 1100px) {
+  .tht-diagnostic-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ---- Responsive: Mobile ---- */
+@media (max-width: 768px) {
+  .tht-coverage-header {
+    padding: 3rem 0 2.5rem;
+  }
+
+  .tht-coverage-title {
+    font-size: 1.6rem;
+  }
+
+  .tht-specialist-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .tht-specialist-divider {
+    display: none;
+  }
+
+  .tht-diagnostic-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tht-coverage-cta {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.25rem;
+  }
+
+  .tht-coverage-cta-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .tht-coverage-cta-actions .btn-primary,
+  .tht-coverage-cta-actions .btn-outline {
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .tht-location-chips {
+    gap: 0.4rem;
+  }
+
+  .tht-coverage-body {
+    padding: 2rem 0 2.5rem;
+  }
+}
