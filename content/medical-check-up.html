@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Check Up (MCU) – RS Awal Bros Dumai | Paket Eksekutif, Corporate & Fit to Work</title>
+    <meta name="description"
+        content="Pusat Medical Check Up (MCU) & Wellness Center RS Awal Bros Dumai. Paket skrining kesehatan pribadi, eksekutif, karyawan industri, pelaut/offshore, dan sertifikasi Fit to Work.">
+    <link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg">
+    <link rel="shortcut icon" type="image/svg+xml" href="../assets/img/favicon.svg">
+    <link rel="alternate icon" type="image/png" href="../assets/img/logo-rs-awalbros.png">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <!-- Full-Page Particle Network Background Canvas (DESIGN.md) -->
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- Master Navbar Placeholder (Pre-rendered for 100% Fail-safe Static Visibility) -->
+    <div id="navbar-placeholder">
+        <div class="topbar">
+            <div class="container">
+                <div class="topbar-ticker-wrapper">
+                    <div class="topbar-ticker-track">
+                        <div class="topbar-item">
+                            <span class="emergency-badge neon-badge">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                                    viewBox="0 0 16 16" class="ambulance-icon">
+                                    <path
+                                        d="M4.5 11a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm7 0a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z" />
+                                    <path
+                                        d="M0 1.5A1.5 1.5 0 0 1 1.5 0h9A1.5 1.5 0 0 1 12 1.5V3h1.365a1.5 1.5 0 0 1 1.258.683l1.17 1.756A1.5 1.5 0 0 1 16 6.324V11.5a1.5 1.5 0 0 1-1.5 1.5h-.5a2.5 2.5 0 0 1-5 0h-2a2.5 2.5 0 0 1-5 0H1.5A1.5 1.5 0 0 1 0 11.5v-10zM10.5 4V1.5a.5.5 0 0 0-.5-.5H1.5a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h.5a2.5 2.5 0 0 1 4.5 0h2a2.5 2.5 0 0 1 4.5 0h.5a.5.5 0 0 0 .5-.5V6.324a.5.5 0 0 0-.077-.268L12.8 4.3a.5.5 0 0 0-.419-.228H10.5z" />
+                                    <path d="M7 4h1.5v1.5H10V7H8.5v1.5H7V7H5.5V5.5H7V4z" />
+                                </svg>
+                                IGD 24 JAM
+                            </span>
+                        </div>
+                        <div class="topbar-item highlight-phone">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                                viewBox="0 0 16 16">
+                                <path
+                                    d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l.975-.978a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328z" />
+                            </svg>
+                            <span>Call Center Emergency: <strong>(0765) 38888</strong></span>
+                        </div>
+                        <div class="topbar-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                                viewBox="0 0 16 16">
+                                <path
+                                    d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                            </svg>
+                            <span>Jl. Jend. Sudirman No. 88, Dumai, Riau</span>
+                        </div>
+                        <div class="topbar-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                                viewBox="0 0 16 16">
+                                <path
+                                    d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
+                                <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
+                            </svg>
+                            <span>Layanan MCU: <strong>Senin – Sabtu (07:30 – 15:30 WIB)</strong></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <header class="header-navbar">
+            <div class="container navbar-container">
+                <a href="index.html" class="brand-logo-wrapper" aria-label="Beranda RS Awal Bros Dumai">
+                    <img src="../assets/img/logo-banner.png" alt="RS Awal Bros Red Banner" class="navbar-logo-banner">
+                    <img src="../assets/img/logo-rs-awalbros.png" alt="Logo Emblem RS Awal Bros"
+                        class="navbar-logo-img">
+                </a>
+
+                <button class="mobile-toggle" id="mobile-toggle-btn" aria-label="Toggle Menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+
+                <nav>
+                    <ul class="nav-menu" id="nav-menu-list">
+                        <li><a href="index.html" class="nav-link">Beranda</a></li>
+
+                        <li class="nav-item-dropdown">
+                            <a href="tentang-kami.html" class="nav-link">
+                                Tentang Kami
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor"
+                                    viewBox="0 0 16 16" style="margin-left: 2px;">
+                                    <path fill-rule="evenodd"
+                                        d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                                </svg>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="profil.html" class="dropdown-link">Profil RS Awal Bros</a></li>
+                                <li><a href="galeri.html" class="dropdown-link">Galeri Rumah Sakit</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="layanan.html" class="nav-link">Layanan</a></li>
+                        <li><a href="dokter.html" class="nav-link">Dokter</a></li>
+
+                        <li class="nav-item-dropdown">
+                            <a href="fasilitas.html" class="nav-link active">
+                                Fasilitas
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor"
+                                    viewBox="0 0 16 16" style="margin-left: 2px;">
+                                    <path fill-rule="evenodd"
+                                        d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                                </svg>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="poliklinikspesialis.html" class="dropdown-link">Poliklinik Spesialis</a></li>
+                                <li><a href="layananrawatinap.html" class="dropdown-link">Layanan Rawat Inap</a></li>
+                                <li><a href="laboratorium-radiologi.html" class="dropdown-link">Laboratorium & Radiologi</a></li>
+                                <li><a href="igd-ambulans.html" class="dropdown-link">IGD & Ambulans 24 Jam</a></li>
+                                <li><a href="medical-check-up.html" class="dropdown-link active">Medical Check Up (MCU)</a></li>
+                                <li><a href="fasilitas.html#cath-lab" class="dropdown-link">Pusat Jantung & Cath Lab</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="janji-temu.html" class="nav-link">Janji Temu</a></li>
+                        <li><a href="kontak.html" class="nav-link">Kontak</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    </div>
+
+    <!-- ============================================================
+         MAIN CONTENT — Medical Check Up (MCU) RS Awal Bros Dumai
+         ============================================================ -->
+    <main>
+
+        <!-- PAGE BANNER -->
+        <section class="page-banner">
+            <div class="container">
+                <h1>Medical Check Up (MCU)</h1>
+                <div class="breadcrumbs">
+                    <a href="index.html">Beranda</a>
+                    <span>&rsaquo;</span>
+                    <span>Fasilitas</span>
+                    <span>&rsaquo;</span>
+                    <span class="current">Medical Check Up (MCU)</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 1. HERO SECTION — Two-Column Article Style -->
+        <section class="poli-hero-section">
+            <div class="container">
+                <div class="poli-hero-grid">
+
+                    <!-- Left Column -->
+                    <div class="poli-hero-content">
+
+                        <div class="poli-hero-badge-row">
+                            <span class="poli-dept-badge">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor"
+                                    viewBox="0 0 16 16" aria-hidden="true">
+                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                    <path d="M10.97 4.97a.235.235 0 0 0-.02-.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"/>
+                                </svg>
+                                Executive Wellness Center
+                            </span>
+                            <span class="poli-schedule-badge">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor"
+                                    viewBox="0 0 16 16" aria-hidden="true">
+                                    <path
+                                        d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
+                                    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
+                                </svg>
+                                Layanan MCU Terpadu
+                            </span>
+                        </div>
+
+                        <h2 class="poli-hero-title">
+                            Pemeriksaan Kesehatan Berkala
+                            <span class="poli-hero-title-accent">untuk Investasi Kesehatan Masa Depan</span>
+                        </h2>
+
+                        <p class="poli-hero-description">
+                            Pusat Medical Check Up (MCU) RS Awal Bros Dumai menyediakan paket skrining kesehatan komprehensif yang dirancang khusus untuk pribadi, calon karyawan, eksekutif perusahaan, hingga pekerja industri maritim & migas (*offshore*). Didukung fasilitas *One-Stop Service* di area khusus yang nyaman, peralatan medis mutakhir, serta konsultasi komprehensif oleh Dokter Spesialis Okupasi.
+                        </p>
+
+                        <div class="poli-condition-tags">
+                            <span class="poli-condition-tag">MCU Eksekutif / Platinum</span>
+                            <span class="poli-condition-tag">Corporate & Karyawan Industri</span>
+                            <span class="poli-condition-tag">Sertifikasi Fit-to-Work / MKK</span>
+                            <span class="poli-condition-tag">MCU Pelaut & Offshore</span>
+                            <span class="poli-condition-tag">Skrining Pra-Nikah & Lansia</span>
+                        </div>
+
+                        <ul class="poli-feature-list">
+                            <li class="poli-feature-item">
+                                <div class="poli-feature-check">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor"
+                                        viewBox="0 0 16 16" aria-hidden="true">
+                                        <path
+                                            d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
+                                    </svg>
+                                </div>
+                                <span>Area One-Stop MCU Lounge VIP eksklusif dipisah dari antrean pasien sakit</span>
+                            </li>
+                            <li class="poli-feature-item">
+                                <div class="poli-feature-check">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor"
+                                        viewBox="0 0 16 16" aria-hidden="true">
+                                        <path
+                                            d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
+                                    </svg>
+                                </div>
+                                <span>Pemeriksaan medis lengkap: Lab, EKG, Treadmill, Radiologi, USG, Audiometri, Spirometri</span>
+                            </li>
+                            <li class="poli-feature-item">
+                                <div class="poli-feature-check">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor"
+                                        viewBox="0 0 16 16" aria-hidden="true">
+                                        <path
+                                            d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
+                                    </svg>
+                                </div>
+                                <span>Hasil Resume Medis berupa buku laporan hardcopy & softcopy PDF terlindungi QR Code</span>
+                            </li>
+                            <li class="poli-feature-item">
+                                <div class="poli-feature-check">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor"
+                                        viewBox="0 0 16 16" aria-hidden="true">
+                                        <path
+                                            d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
+                                    </svg>
+                                </div>
+                                <span>Dukungan Dokter Spesialis Kedokteran Okupasi (Sp.Ok) tersertifikasi Kemenkes</span>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                    <!-- Right Column: Image Frame -->
+                    <div class="poli-hero-image-frame">
+                        <div class="poli-image-ring" aria-hidden="true"></div>
+                        <div class="poli-image-wrapper">
+                            <img src="../assets/img/doctor_team.jpg"
+                                alt="Fasilitas Medical Check Up RS Awal Bros Dumai" width="560" height="420" loading="eager">
+
+                            <div class="poli-float-badge poli-float-badge--top">
+                                <div class="poli-float-badge-icon poli-float-badge-icon--green">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                                        viewBox="0 0 16 16" aria-hidden="true">
+                                        <path
+                                            d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01 1.056-.638.622a2.89 2.89 0 0 0 0 4.134l.638.622-.01 1.056a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.639a2.89 2.89 0 0 0 4.134 0l.622-.639.89.01a2.89 2.89 0 0 0 2.924-2.924l-.01-1.056.638-.622a2.89 2.89 0 0 0 0-4.134l-.638-.622.01-1.056a2.89 2.89 0 0 0-2.924-2.924l-.89.011-.622-.638zm.47 5.23a.75.75 0 0 1 .018 1.06L7.43 10.24a.75.75 0 0 1-1.08.02L4.62 8.53a.75.75 0 0 1 1.04-1.08l1.22 1.173 2.656-2.504a.75.75 0 0 1 1.06-.018z" />
+                                    </svg>
+                                </div>
+                                <div class="poli-float-badge-text">
+                                    <strong>One-Stop Lounge</strong>
+                                    <span>VIP Service & Meal</span>
+                                </div>
+                            </div>
+
+                            <div class="poli-float-badge poli-float-badge--bottom">
+                                <div class="poli-float-badge-icon poli-float-badge-icon--teal">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                                        viewBox="0 0 16 16" aria-hidden="true">
+                                        <path
+                                            d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                                    </svg>
+                                </div>
+                                <div class="poli-float-badge-text">
+                                    <strong>Dokter Spesialis Okupasi</strong>
+                                    <span>Sertifikasi K3 Industri</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. QUICK ACCESS BAR -->
+        <div class="quick-access-section">
+            <div class="container">
+                <div class="quick-access-grid">
+                    <div class="quick-card" data-target="janji-temu.html">
+                        <div class="quick-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                viewBox="0 0 16 16">
+                                <path
+                                    d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                <path
+                                    d="M10.97 4.97a.235.235 0 0 0-.02-.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4>Paket MCU Eksekutif</h4>
+                            <p>Skrining menyeluruh untuk individu & keluarga</p>
+                        </div>
+                    </div>
+
+                    <div class="quick-card" data-target="janji-temu.html">
+                        <div class="quick-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                viewBox="0 0 16 16">
+                                <path
+                                    d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4>Corporate & Fit to Work</h4>
+                            <p>MCU massal karyawan & sertifikasi industri</p>
+                        </div>
+                    </div>
+
+                    <div class="quick-card" data-target="kontak.html">
+                        <div class="quick-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                viewBox="0 0 16 16">
+                                <path
+                                    d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l.975-.978a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h4>Reservasi MCU Online</h4>
+                            <p>Pilih jadwal & konfirmasi syarat puasa</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. CARI PAKET MCU & KATALOG SKRINING -->
+        <section class="tht-coverage-section">
+
+            <div class="tht-coverage-header">
+                <div class="container">
+                    <div class="tht-coverage-header-inner">
+                        <div class="tht-coverage-label">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor"
+                                viewBox="0 0 16 16" aria-hidden="true">
+                                <path
+                                    d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                            </svg>
+                            Standar Pemeriksaan Kesehatan Terakreditasi
+                        </div>
+
+                        <h2 class="tht-coverage-title">
+                            Katalog Paket Medical Check Up
+                            <span class="tht-coverage-title-highlight">Lengkap, Akurat & Terjangkau</span>
+                        </h2>
+
+                        <p class="tht-coverage-desc">
+                            Setiap paket MCU di RS Awal Bros Dumai dirancang cermat untuk mendeteksi berbagai risiko penyakit sejak dini — mulai dari diabetes, hipertensi, gangguan ginjal/hati, kelainan jantung, hingga risiko kanker. Seluruh tes ditangani oleh analisis laboratorium berpengalaman dan dievaluasi oleh dokter spesialis.
+                        </p>
+
+                        <div class="tht-location-chips">
+                            <div class="tht-location-chip">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" viewBox="0 0 16 16"><path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/></svg>
+                                Paket Silver (Basic)
+                            </div>
+                            <div class="tht-location-chip">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" viewBox="0 0 16 16"><path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/></svg>
+                                Paket Gold (Standard)
+                            </div>
+                            <div class="tht-location-chip">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" viewBox="0 0 16 16"><path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/></svg>
+                                Paket Platinum Eksekutif
+                            </div>
+                            <div class="tht-location-chip">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" viewBox="0 0 16 16"><path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/></svg>
+                                Sertifikasi Fit to Work Industri
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MCU Package Cards Grid -->
+            <div class="tht-coverage-body">
+                <div class="container">
+
+                    <div class="tht-diagnostic-header">
+                        <h3 class="tht-diagnostic-title">Pilihan Paket Medical Check Up Populer</h3>
+                        <p class="tht-diagnostic-subtitle">Pilih paket skrining yang paling sesuai dengan kelompok usia dan kebutuhan kesehatan Anda</p>
+                    </div>
+
+                    <div class="tht-diagnostic-grid">
+
+                        <!-- Card 1: Silver -->
+                        <article class="tht-diag-card">
+                            <div class="tht-diag-card-icon tht-diag-icon--mint">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
+                                    viewBox="0 0 16 16" aria-hidden="true">
+                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                </svg>
+                            </div>
+                            <div class="tht-diag-card-body">
+                                <span class="tht-diag-card-abbr">Basic Health</span>
+                                <h4 class="tht-diag-card-name">Paket MCU Silver</h4>
+                                <p class="tht-diag-card-desc">Skrining dasar: Pemeriksaan fisik dokter umum, Darah Rutin, Urin Lengkap, Gula Darah Puasa, Kolesterol Total, Asam Urat, & Rontgen Thoraks.</p>
+                            </div>
+                        </article>
+
+                        <!-- Card 2: Gold -->
+                        <article class="tht-diag-card">
+                            <div class="tht-diag-card-icon tht-diag-icon--teal">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
+                                    viewBox="0 0 16 16" aria-hidden="true">
+                                    <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01 1.056-.638.622a2.89 2.89 0 0 0 0 4.134l.638.622-.01 1.056a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.639a2.89 2.89 0 0 0 4.134 0l.622-.639.89.01a2.89 2.89 0 0 0 2.924-2.924l-.01-1.056.638-.622a2.89 2.89 0 0 0 0-4.134l-.638-.622.01-1.056a2.89 2.89 0 0 0-2.924-2.924l-.89.011-.622-.638z"/>
+                                </svg>
+                            </div>
+                            <div class="tht-diag-card-body">
+                                <span class="tht-diag-card-abbr">Standard Care</span>
+                                <h4 class="tht-diag-card-name">Paket MCU Gold</h4>
+                                <p class="tht-diag-card-desc">Pemeriksaan medis standar: MCU Silver + Profil Lipid Lengkap (HDL/LDL/Trigliserida), Fungsi Hati (SGOT/SGPT), Fungsi Ginjal (Ureum/Kreatinin), & EKG Rekam Jantung.</p>
+                            </div>
+                        </article>
+
+                        <!-- Card 3: Platinum (Featured) -->
+                        <article class="tht-diag-card tht-diag-card--featured">
+                            <div class="tht-diag-card-icon tht-diag-icon--white">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
+                                    viewBox="0 0 16 16" aria-hidden="true">
+                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                </svg>
+                            </div>
+                            <div class="tht-diag-card-body">
+                                <span class="tht-diag-card-abbr tht-diag-card-abbr--white">Executive Deluxe</span>
+                                <h4 class="tht-diag-card-name">Paket MCU Platinum Eksekutif</h4>
+                                <p class="tht-diag-card-desc">Skrining komprehensif tingkat lanjut: MCU Gold + USG Abdomen Lengkap, Treadmill Test Jantung, HbA1c, Tumor Marker (CEA/PSA), & Makan Siang di Lounge VIP.</p>
+                            </div>
+                            <div class="tht-diag-card-featured-tag">Terfavorit</div>
+                        </article>
+
+                        <!-- Card 4: Jantung & Kardiovaskular -->
+                        <article class="tht-diag-card">
+                            <div class="tht-diag-card-icon tht-diag-icon--mint">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
+                                    viewBox="0 0 16 16" aria-hidden="true">
+                                    <path d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+                                </svg>
+                            </div>
+                            <div class="tht-diag-card-body">
+                                <span class="tht-diag-card-abbr">Jantung Kardiologi</span>
+                                <h4 class="tht-diag-card-name">Paket MCU Sehat Jantung</h4>
+                                <p class="tht-diag-card-desc">Fokus deteksi dini penyakit jantung koroner: EKG Rest, Treadmill Test, Echocardiography (USG Jantung), Profil Lipid, & Konsultasi Dokter Spesialis Jantung.</p>
+                            </div>
+                        </article>
+
+                        <!-- Card 5: Fit to Work & Offshore -->
+                        <article class="tht-diag-card">
+                            <div class="tht-diag-card-icon tht-diag-icon--teal">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
+                                    viewBox="0 0 16 16" aria-hidden="true">
+                                    <path d="M8 1a5 5 0 1 0 0 10A5 5 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z"/>
+                                </svg>
+                            </div>
+                            <div class="tht-diag-card-body">
+                                <span class="tht-diag-card-abbr">K3 Industri</span>
+                                <h4 class="tht-diag-card-name">MCU Fit-to-Work & Offshore</h4>
+                                <p class="tht-diag-card-desc">Sertifikasi kelayakan kerja karyawan kilang migas, pelaut/maritim, & ketinggian: Audiometri, Spirometri tes fungsi paru, Tes Narkoba, & Surat Keterangan MKK.</p>
+                            </div>
+                        </article>
+
+                        <!-- Card 6: Pra-Nikah -->
+                        <article class="tht-diag-card">
+                            <div class="tht-diag-card-icon tht-diag-icon--mint">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
+                                    viewBox="0 0 16 16" aria-hidden="true">
+                                    <path d="M8 2.748l-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748z"/>
+                                </svg>
+                            </div>
+                            <div class="tht-diag-card-body">
+                                <span class="tht-diag-card-abbr">Pre-Marital</span>
+                                <h4 class="tht-diag-card-name">Paket MCU Pra-Nikah</h4>
+                                <p class="tht-diag-card-desc">Skrining kesehatan calon pengantin: Tes Golongan Darah/Rhesus, Skrining Thalassemia, HBsAg, HIV, VDRL, TORCH (wanita), & Konsultasi Spesialis Kebidanan.</p>
+                            </div>
+                        </article>
+
+                    </div>
+
+                    <!-- CTA Strip -->
+                    <div class="tht-coverage-cta">
+                        <p class="tht-coverage-cta-text">Ingin melakukan pendaftaran MCU atau konsultasi kebutuhan skrining karyawan?</p>
+                        <div class="tht-coverage-cta-actions">
+                            <a href="janji-temu.html" class="btn-primary" id="cta-mcu-janji">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor"
+                                    viewBox="0 0 16 16" aria-hidden="true">
+                                    <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z" />
+                                </svg>
+                                Booking Jadwal MCU
+                            </a>
+                            <a href="kontak.html" class="btn-outline" id="cta-mcu-kontak">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor"
+                                    viewBox="0 0 16 16" aria-hidden="true">
+                                    <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l.975-.978a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328z" />
+                                </svg>
+                                Konsultasi Corporate MCU
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- 4. ALUR PELAYANAN MCU ONE-STOP SERVICE -->
+        <section style="padding: 5rem 0; background: var(--surface-canvas, #fbf9f8);">
+            <div class="container">
+                <div style="text-align: center; margin-bottom: 3rem;">
+                    <span class="poli-dept-badge" style="margin-bottom: 1rem; display: inline-flex;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+                        </svg>
+                        One-Stop MCU Service
+                    </span>
+                    <h2 style="font-size: clamp(1.5rem, 3vw, 2.25rem); font-weight: 700; color: var(--on-surface, #1b1c1c); margin: 0.5rem 0 1rem 0;">
+                        Alur Pelayanan MCU Terpadu & Efisien
+                    </h2>
+                    <p style="color: var(--secondary-neutral, #5d5f5f); font-size: 1rem; max-width: 640px; margin: 0 auto;">
+                        Seluruh rangkaian pemeriksaan MCU diselesaikan dalam <strong>satu hari</strong> di area lounge eksekutif khusus yang nyaman dan bebas dari antrean pasien umum.
+                    </p>
+                </div>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem;">
+
+                    <div style="background: #fff; border-radius: 16px; padding: 2rem 1.5rem; box-shadow: 0 4px 20px rgba(0,107,90,0.08); border-top: 4px solid var(--primary-container, #00a88f); text-align: center; transition: transform 0.2s;"
+                        onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform=''">
+                        <div style="width: 56px; height: 56px; background: linear-gradient(135deg, var(--primary-container, #00a88f), var(--primary, #006b5a)); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem auto;">
+                            <span style="font-size: 1.4rem; font-weight: 800; color: #fff;">1</span>
+                        </div>
+                        <h4 style="margin-bottom: 0.5rem; color: var(--on-surface, #1b1c1c); font-size: 1rem;">Booking & Konfirmasi Puasa</h4>
+                        <p style="font-size: 0.875rem; color: var(--secondary-neutral, #5d5f5f); line-height: 1.5;">Reservasi jadwal online atau via telepon. Tim kami akan mengirimkan panduan puasa 10–12 jam sebelum pemeriksaan.</p>
+                    </div>
+
+                    <div style="background: #fff; border-radius: 16px; padding: 2rem 1.5rem; box-shadow: 0 4px 20px rgba(0,107,90,0.08); border-top: 4px solid var(--primary-container, #00a88f); text-align: center; transition: transform 0.2s;"
+                        onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform=''">
+                        <div style="width: 56px; height: 56px; background: linear-gradient(135deg, var(--primary-container, #00a88f), var(--primary, #006b5a)); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem auto;">
+                            <span style="font-size: 1.4rem; font-weight: 800; color: #fff;">2</span>
+                        </div>
+                        <h4 style="margin-bottom: 0.5rem; color: var(--on-surface, #1b1c1c); font-size: 1rem;">Registrasi & Anamnesis</h4>
+                        <p style="font-size: 0.875rem; color: var(--secondary-neutral, #5d5f5f); line-height: 1.5;">Check-in di MCU Lounge. Perawat mencatat riwayat medis, keluhan utama, dan melakukan pengukuran antropometri (BB, TB, tekanan darah, IMT).</p>
+                    </div>
+
+                    <div style="background: #fff; border-radius: 16px; padding: 2rem 1.5rem; box-shadow: 0 4px 20px rgba(0,107,90,0.08); border-top: 4px solid var(--primary-container, #00a88f); text-align: center; transition: transform 0.2s;"
+                        onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform=''">
+                        <div style="width: 56px; height: 56px; background: linear-gradient(135deg, var(--primary-container, #00a88f), var(--primary, #006b5a)); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem auto;">
+                            <span style="font-size: 1.4rem; font-weight: 800; color: #fff;">3</span>
+                        </div>
+                        <h4 style="margin-bottom: 0.5rem; color: var(--on-surface, #1b1c1c); font-size: 1rem;">Rangkaian Pemeriksaan</h4>
+                        <p style="font-size: 0.875rem; color: var(--secondary-neutral, #5d5f5f); line-height: 1.5;">Pengambilan darah & urin, EKG, Treadmill, USG, Rontgen, Audiometri, Spirometri — semua terpandu oleh staf MCU di area yang sama.</p>
+                    </div>
+
+                    <div style="background: #fff; border-radius: 16px; padding: 2rem 1.5rem; box-shadow: 0 4px 20px rgba(0,107,90,0.08); border-top: 4px solid var(--primary-container, #00a88f); text-align: center; transition: transform 0.2s;"
+                        onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform=''">
+                        <div style="width: 56px; height: 56px; background: linear-gradient(135deg, var(--primary-container, #00a88f), var(--primary, #006b5a)); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem auto;">
+                            <span style="font-size: 1.4rem; font-weight: 800; color: #fff;">4</span>
+                        </div>
+                        <h4 style="margin-bottom: 0.5rem; color: var(--on-surface, #1b1c1c); font-size: 1rem;">Resume Medis & Konsultasi</h4>
+                        <p style="font-size: 0.875rem; color: var(--secondary-neutral, #5d5f5f); line-height: 1.5;">Konsultasi hasil komprehensif dengan Dokter Spesialis Okupasi. Laporan Resume Medis hardcopy & PDF QR dikirimkan dalam 1–3 hari kerja.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. MATRIKS KOMPARASI PAKET MCU -->
+        <section style="padding: 5rem 0; background: #ffffff;">
+            <div class="container">
+                <div style="text-align: center; margin-bottom: 3rem;">
+                    <span class="poli-dept-badge" style="margin-bottom: 1rem; display: inline-flex;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3z"/>
+                        </svg>
+                        Perbandingan Paket
+                    </span>
+                    <h2 style="font-size: clamp(1.5rem, 3vw, 2.25rem); font-weight: 700; color: var(--on-surface, #1b1c1c); margin: 0.5rem 0 1rem 0;">
+                        Matriks Komparasi Paket MCU
+                    </h2>
+                    <p style="color: var(--secondary-neutral, #5d5f5f); font-size: 1rem; max-width: 600px; margin: 0 auto;">
+                        Bandingkan apa yang tercakup di setiap paket untuk memilih yang paling sesuai kebutuhan.
+                    </p>
+                </div>
+
+                <div style="overflow-x: auto; border-radius: 16px; box-shadow: 0 6px 30px rgba(0,107,90,0.08); border: 1px solid rgba(0,107,90,0.12);">
+                    <table style="width: 100%; border-collapse: collapse; background: #ffffff; font-size: 0.875rem; min-width: 660px;">
+                        <thead>
+                            <tr style="background: linear-gradient(135deg, var(--primary, #006b5a) 0%, var(--primary-container, #00a88f) 100%);">
+                                <th style="padding: 1.15rem 1.25rem; text-align: left; color: #fff; font-weight: 700; width: 34%;">Jenis Pemeriksaan</th>
+                                <th style="padding: 1.15rem 1rem; text-align: center; color: #fff; font-weight: 700; width: 22%;">Silver</th>
+                                <th style="padding: 1.15rem 1rem; text-align: center; color: #fff; font-weight: 700; width: 22%;">Gold</th>
+                                <th style="padding: 1.15rem 1rem; text-align: center; color: rgba(255,255,240,1); font-weight: 700; width: 22%; background: rgba(255,255,255,0.15);">Platinum ⭐</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="border-bottom: 1px solid #f0f0f0; background: rgba(0,168,143,0.03);">
+                                <td style="padding: 0.9rem 1.25rem; font-weight: 600; color: var(--on-surface, #1b1c1c);">Pemeriksaan Fisik Dokter Umum</td>
+                                <td style="padding: 0.9rem; text-align: center; color: var(--primary-container, #00a88f); font-size: 1.2rem;">✓</td>
+                                <td style="padding: 0.9rem; text-align: center; color: var(--primary-container, #00a88f); font-size: 1.2rem;">✓</td>
+                                <td style="padding: 0.9rem; text-align: center; color: var(--primary-container, #00a88f); font-size: 1.2rem; background: rgba(0,168,143,0.04);">✓</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #f0f0f0;">
+                                <td style="padding: 0.9rem 1.25rem; font-weight: 600; color: var(--on-surface, #1b1c1c);">Darah Rutin, Urin, Gula Darah, Asam Urat</td>
+                                <td style="padding: 0.9rem; text-align: center; color: var(--primary-container, #00a88f); font-size: 1.2rem;">✓</td>
+                                <td style="padding: 0.9rem; text-align: center; color: var(--primary-container, #00a88f); font-size: 1.2rem;">✓</td>
+                                <td style="padding: 0.9rem; text-align: center; color: var(--primary-container, #00a88f); font-size: 1.2rem; background: rgba(0,168,143,0.04);">✓</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #f0f0f0; background: rgba(0,168,143,0.03);">
+                                <td style="padding: 0.9rem 1.25rem; font-weight: 600; color: var(--on-surface, #1b1c1c);">Rontgen Thoraks (Paru & Jantung)</td>
+                                <td style="padding: 0.9rem; text-align: center; color: var(--primary-container, #00a88f); font-size: 1.2rem;">✓</td>
+                                <td style="padding: 0.9rem; text-align: center; color: var(--primary-container, #00a88f); font-size: 1.2rem;">✓</td>
+                                <td style="padding: 0.9rem; text-align: center; color: var(--primary-container, #00a88f); font-size: 1.2rem; background: rgba(0,168,143,0.04);">✓</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #f0f0f0;">
+                                <td style="padding: 0.9rem 1.25rem; font-weight: 600; color: var(--on-surface, #1b1c1c);">Profil Lipid Lengkap (HDL/LDL/Trigliserida) & Fungsi Hati/Ginjal</td>
+                                <td style="padding: 0.9rem; text-align: center; color: #cbd5e1; font-size: 1.2rem;">–</td>
+                                <td style="padding: 0.9rem; text-align: center; color: var(--primary-container, #00a88f); font-size: 1.2rem;">✓</td>
+                                <td style="padding: 0.9rem; text-align: center; color: var(--primary-container, #00a88f); font-size: 1.2rem; background: rgba(0,168,143,0.04);">✓</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #f0f0f0; background: rgba(0,168,143,0.03);">
+                                <td style="padding: 0.9rem 1.25rem; font-weight: 600; color: var(--on-surface, #1b1c1c);">EKG Rekam Jantung 12-Lead</td>
+                                <td style="padding: 0.9rem; text-align: center; color: #cbd5e1; font-size: 1.2rem;">–</td>
+                                <td style="padding: 0.9rem; text-align: center; color: var(--primary-container, #00a88f); font-size: 1.2rem;">✓</td>
+                                <td style="padding: 0.9rem; text-align: center; color: var(--primary-container, #00a88f); font-size: 1.2rem; background: rgba(0,168,143,0.04);">✓</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #f0f0f0;">
+                                <td style="padding: 0.9rem 1.25rem; font-weight: 600; color: var(--on-surface, #1b1c1c);">USG Abdomen Lengkap (Hati, Ginjal, Empedu, Pankreas)</td>
+                                <td style="padding: 0.9rem; text-align: center; color: #cbd5e1; font-size: 1.2rem;">–</td>
+                                <td style="padding: 0.9rem; text-align: center; color: #cbd5e1; font-size: 1.2rem;">–</td>
+                                <td style="padding: 0.9rem; text-align: center; color: var(--primary-container, #00a88f); font-size: 1.2rem; background: rgba(0,168,143,0.04);">✓</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #f0f0f0; background: rgba(0,168,143,0.03);">
+                                <td style="padding: 0.9rem 1.25rem; font-weight: 600; color: var(--on-surface, #1b1c1c);">Treadmill Test & HbA1c (Gula Darah 3 Bulan)</td>
+                                <td style="padding: 0.9rem; text-align: center; color: #cbd5e1; font-size: 1.2rem;">–</td>
+                                <td style="padding: 0.9rem; text-align: center; color: #cbd5e1; font-size: 1.2rem;">–</td>
+                                <td style="padding: 0.9rem; text-align: center; color: var(--primary-container, #00a88f); font-size: 1.2rem; background: rgba(0,168,143,0.04);">✓</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #f0f0f0;">
+                                <td style="padding: 0.9rem 1.25rem; font-weight: 600; color: var(--on-surface, #1b1c1c);">Tumor Marker (CEA, PSA/CA-125) & Konsultasi Sp.Ok</td>
+                                <td style="padding: 0.9rem; text-align: center; color: #cbd5e1; font-size: 1.2rem;">–</td>
+                                <td style="padding: 0.9rem; text-align: center; color: #cbd5e1; font-size: 1.2rem;">–</td>
+                                <td style="padding: 0.9rem; text-align: center; color: var(--primary-container, #00a88f); font-size: 1.2rem; background: rgba(0,168,143,0.04);">✓</td>
+                            </tr>
+                            <tr style="background: rgba(0,168,143,0.05);">
+                                <td style="padding: 0.9rem 1.25rem; font-weight: 600; color: var(--on-surface, #1b1c1c);">Makan Siang di Lounge VIP & Laporan PDF QR</td>
+                                <td style="padding: 0.9rem; text-align: center; color: #cbd5e1; font-size: 1.2rem;">–</td>
+                                <td style="padding: 0.9rem; text-align: center; color: #cbd5e1; font-size: 1.2rem;">–</td>
+                                <td style="padding: 0.9rem; text-align: center; color: var(--primary-container, #00a88f); font-size: 1.2rem; background: rgba(0,168,143,0.06);">✓</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p style="text-align:center; margin-top: 1.25rem; font-size: 0.82rem; color: var(--secondary-neutral); font-style: italic;">
+                    * Paket dapat dikustomisasi sesuai kebutuhan spesifik corporate/industri. Hubungi tim MCU untuk penawaran khusus.
+                </p>
+            </div>
+        </section>
+
+        <!-- 6. COUNTER STRIP STATISTIK MCU -->
+        <section style="background: linear-gradient(135deg, var(--primary, #006b5a) 0%, var(--primary-container, #00a88f) 60%, #20c997 100%); padding: 4rem 0; position: relative; overflow: hidden;">
+            <div style="position: absolute; top: -60px; left: -60px; width: 200px; height: 200px; border-radius: 50%; background: rgba(255,255,255,0.05); pointer-events: none;" aria-hidden="true"></div>
+            <div style="position: absolute; bottom: -80px; right: -40px; width: 260px; height: 260px; border-radius: 50%; background: rgba(255,255,255,0.04); pointer-events: none;" aria-hidden="true"></div>
+
+            <div class="container">
+                <div style="text-align: center; margin-bottom: 2.5rem;">
+                    <p style="color: rgba(255,255,255,0.85); font-size: 0.875rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 600; margin-bottom: 0.5rem;">MCU Wellness Center</p>
+                    <h2 style="color: #ffffff; font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 700; margin: 0;">Dipercaya Ribuan Pelanggan Setiap Tahun</h2>
+                </div>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1.5rem;">
+                    <div style="text-align: center; padding: 1.5rem; background: rgba(255,255,255,0.1); border-radius: 16px; backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.15);">
+                        <div style="font-size: 2.75rem; font-weight: 800; color: #fff; line-height: 1; margin-bottom: 0.5rem;">8K<span style="font-size: 1.5rem;">+</span></div>
+                        <div style="font-size: 0.9rem; color: rgba(255,255,255,0.85); font-weight: 500;">Pasien MCU / Tahun</div>
+                        <div style="font-size: 0.78rem; color: rgba(255,255,255,0.6); margin-top: 0.25rem;">Individu & Corporate</div>
+                    </div>
+                    <div style="text-align: center; padding: 1.5rem; background: rgba(255,255,255,0.1); border-radius: 16px; backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.15);">
+                        <div style="font-size: 2.75rem; font-weight: 800; color: #fff; line-height: 1; margin-bottom: 0.5rem;">50<span style="font-size: 1.5rem;">+</span></div>
+                        <div style="font-size: 0.9rem; color: rgba(255,255,255,0.85); font-weight: 500;">Mitra Perusahaan</div>
+                        <div style="font-size: 0.78rem; color: rgba(255,255,255,0.6); margin-top: 0.25rem;">Industri Migas & Maritim</div>
+                    </div>
+                    <div style="text-align: center; padding: 1.5rem; background: rgba(255,255,255,0.1); border-radius: 16px; backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.15);">
+                        <div style="font-size: 2.75rem; font-weight: 800; color: #fff; line-height: 1; margin-bottom: 0.5rem;">1<span style="font-size: 1.5rem;">Hari</span></div>
+                        <div style="font-size: 0.9rem; color: rgba(255,255,255,0.85); font-weight: 500;">Selesai dalam 1 Hari</div>
+                        <div style="font-size: 0.78rem; color: rgba(255,255,255,0.6); margin-top: 0.25rem;">One-Stop Complete Service</div>
+                    </div>
+                    <div style="text-align: center; padding: 1.5rem; background: rgba(255,255,255,0.1); border-radius: 16px; backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.15);">
+                        <div style="font-size: 2.75rem; font-weight: 800; color: #fff; line-height: 1; margin-bottom: 0.5rem;">6<span style="font-size: 1.5rem;">Paket</span></div>
+                        <div style="font-size: 0.9rem; color: rgba(255,255,255,0.85); font-weight: 500;">Pilihan Paket MCU</div>
+                        <div style="font-size: 0.78rem; color: rgba(255,255,255,0.6); margin-top: 0.25rem;">Dari Basic hingga Platinum</div>
+                    </div>
+                    <div style="text-align: center; padding: 1.5rem; background: rgba(255,255,255,0.1); border-radius: 16px; backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.15);">
+                        <div style="font-size: 2.75rem; font-weight: 800; color: #fff; line-height: 1; margin-bottom: 0.5rem;">3<span style="font-size: 1.5rem;">Hari</span></div>
+                        <div style="font-size: 0.9rem; color: rgba(255,255,255,0.85); font-weight: 500;">Hasil Laporan Resmi</div>
+                        <div style="font-size: 0.78rem; color: rgba(255,255,255,0.6); margin-top: 0.25rem;">Hardcopy & PDF QR-Code</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. LAYANAN MCU CORPORATE & PARTNERSHIP -->
+        <section style="padding: 5rem 0; background: var(--surface-canvas, #fbf9f8);">
+            <div class="container">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+                    <div>
+                        <span class="poli-dept-badge" style="margin-bottom: 1.25rem; display: inline-flex;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+                            </svg>
+                            MCU Corporate & Industri
+                        </span>
+                        <h2 style="font-size: clamp(1.4rem, 2.5vw, 2rem); font-weight: 700; color: var(--on-surface, #1b1c1c); margin: 0.5rem 0 1.25rem 0; line-height: 1.3;">
+                            Layanan MCU Massal untuk Perusahaan & Industri Dumai
+                        </h2>
+                        <p style="color: var(--secondary-neutral, #5d5f5f); font-size: 0.95rem; line-height: 1.75; margin-bottom: 1.5rem;">
+                            RS Awal Bros Dumai melayani program <strong>MCU Corporate</strong> skala besar untuk perusahaan di kawasan industri Dumai, migas, pelabuhan, dan manufaktur. Tim MCU dapat dijadwalkan sesuai kebutuhan roster shift karyawan.
+                        </p>
+                        <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+                            <div style="display: flex; align-items: flex-start; gap: 0.75rem;">
+                                <div style="width: 28px; height: 28px; background: rgba(0,168,143,0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--primary-container);">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/></svg>
+                                </div>
+                                <span style="font-size: 0.9rem; color: var(--on-surface); line-height: 1.6;">MCU Massal on-site atau terpusat di RS — minimal 10 peserta per sesi</span>
+                            </div>
+                            <div style="display: flex; align-items: flex-start; gap: 0.75rem;">
+                                <div style="width: 28px; height: 28px; background: rgba(0,168,143,0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--primary-container);">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/></svg>
+                                </div>
+                                <span style="font-size: 0.9rem; color: var(--on-surface); line-height: 1.6;">Laporan individual + rekapitulasi status kesehatan karyawan per departemen</span>
+                            </div>
+                            <div style="display: flex; align-items: flex-start; gap: 0.75rem;">
+                                <div style="width: 28px; height: 28px; background: rgba(0,168,143,0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--primary-container);">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/></svg>
+                                </div>
+                                <span style="font-size: 0.9rem; color: var(--on-surface); line-height: 1.6;">Surat Fit-to-Work & MKK berstandar Kemenaker untuk pekerja industri</span>
+                            </div>
+                            <div style="display: flex; align-items: flex-start; gap: 0.75rem;">
+                                <div style="width: 28px; height: 28px; background: rgba(0,168,143,0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--primary-container);">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/></svg>
+                                </div>
+                                <span style="font-size: 0.9rem; color: var(--on-surface); line-height: 1.6;">Dukungan invoice perusahaan & pembayaran termin untuk MCU massal</span>
+                            </div>
+                        </div>
+                        <div style="margin-top: 2rem;">
+                            <a href="kontak.html" id="cta-mcu-corporate"
+                                style="display: inline-flex; align-items: center; gap: 0.5rem; background: var(--primary-container, #00a88f); color: #fff; padding: 0.875rem 1.75rem; border-radius: 10px; font-weight: 700; font-size: 0.95rem; text-decoration: none; transition: background 0.2s, transform 0.2s;"
+                                onmouseover="this.style.background='var(--primary, #006b5a)'; this.style.transform='translateY(-2px)'"
+                                onmouseout="this.style.background='var(--primary-container, #00a88f)'; this.style.transform=''">
+                                💼 Hubungi Tim Corporate MCU
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Right: Industry Highlight Cards -->
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem;">
+                        <div style="background: #ffffff; border-radius: 14px; padding: 1.5rem; box-shadow: 0 4px 16px rgba(0,107,90,0.08); border-left: 3px solid var(--primary-container, #00a88f); transition: transform 0.2s;"
+                            onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform=''">
+                            <div style="font-size: 1.75rem; margin-bottom: 0.5rem;">⛽</div>
+                            <h5 style="font-size: 0.9rem; font-weight: 700; margin-bottom: 0.4rem; color: var(--on-surface);">Industri Migas & Kilang</h5>
+                            <p style="font-size: 0.8rem; color: var(--secondary-neutral); line-height: 1.5;">MCU Fit to Work offshore, tes NAZA, Spirometri & Audiometri untuk pekerja petrochemical.</p>
+                        </div>
+                        <div style="background: #ffffff; border-radius: 14px; padding: 1.5rem; box-shadow: 0 4px 16px rgba(0,107,90,0.08); border-left: 3px solid var(--primary-container, #00a88f); transition: transform 0.2s;"
+                            onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform=''">
+                            <div style="font-size: 1.75rem; margin-bottom: 0.5rem;">🚢</div>
+                            <h5 style="font-size: 0.9rem; font-weight: 700; margin-bottom: 0.4rem; color: var(--on-surface);">Pelaut & Maritim</h5>
+                            <p style="font-size: 0.8rem; color: var(--secondary-neutral); line-height: 1.5;">MCU standar BST/STCW pelaut, sertifikasi mata & pendengaran, dan Surat Kesehatan Pelaut.</p>
+                        </div>
+                        <div style="background: #ffffff; border-radius: 14px; padding: 1.5rem; box-shadow: 0 4px 16px rgba(0,107,90,0.08); border-left: 3px solid var(--primary-container, #00a88f); transition: transform 0.2s;"
+                            onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform=''">
+                            <div style="font-size: 1.75rem; margin-bottom: 0.5rem;">🏗️</div>
+                            <h5 style="font-size: 0.9rem; font-weight: 700; margin-bottom: 0.4rem; color: var(--on-surface);">Konstruksi & Ketinggian</h5>
+                            <p style="font-size: 0.8rem; color: var(--secondary-neutral); line-height: 1.5;">MCU khusus pekerja ketinggian: Tes keseimbangan, jantung, dan psikotes standar K3 Kemenaker.</p>
+                        </div>
+                        <div style="background: #ffffff; border-radius: 14px; padding: 1.5rem; box-shadow: 0 4px 16px rgba(0,107,90,0.08); border-left: 3px solid var(--primary-container, #00a88f); transition: transform 0.2s;"
+                            onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform=''">
+                            <div style="font-size: 1.75rem; margin-bottom: 0.5rem;">🏢</div>
+                            <h5 style="font-size: 0.9rem; font-weight: 700; margin-bottom: 0.4rem; color: var(--on-surface);">Perkantoran & Perbankan</h5>
+                            <p style="font-size: 0.8rem; color: var(--secondary-neutral); line-height: 1.5;">MCU eksekutif karyawan dan calon karyawan baru sesuai standar HRD perusahaan.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. FAQ MCU -->
+        <section style="padding: 5rem 0; background: #ffffff;">
+            <div class="container">
+                <div style="text-align: center; margin-bottom: 3rem;">
+                    <span class="poli-dept-badge" style="margin-bottom: 1rem; display: inline-flex;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z"/>
+                        </svg>
+                        FAQ MCU
+                    </span>
+                    <h2 style="font-size: clamp(1.5rem, 3vw, 2.25rem); font-weight: 700; color: var(--on-surface, #1b1c1c); margin: 0.5rem 0 1rem 0;">
+                        Pertanyaan Umum Seputar Medical Check Up
+                    </h2>
+                </div>
+
+                <div style="max-width: 820px; margin: 0 auto; display: flex; flex-direction: column; gap: 1rem;">
+
+                    <details style="border: 1px solid rgba(0,107,90,0.2); border-radius: 12px; overflow: hidden;">
+                        <summary style="padding: 1.25rem 1.5rem; cursor: pointer; font-weight: 600; color: var(--on-surface); display: flex; justify-content: space-between; align-items: center; list-style: none; user-select: none; background: var(--surface-canvas, #fbf9f8);">
+                            Berapa lama durasi MCU dan apakah bisa selesai dalam 1 hari?
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="var(--primary-container)" viewBox="0 0 16 16" style="flex-shrink:0;">
+                                <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                            </svg>
+                        </summary>
+                        <div style="padding: 1.25rem 1.5rem; border-top: 1px solid rgba(0,107,90,0.1); background: #fff; color: var(--secondary-neutral); font-size: 0.9rem; line-height: 1.7;">
+                            Ya! Seluruh rangkaian MCU dapat diselesaikan dalam <strong>1 hari (pukul 07:30 – 15:00 WIB)</strong> di area MCU Lounge RS Awal Bros Dumai. Hasil pemeriksaan laboratorium dasar tersedia di hari yang sama, sementara laporan Resume Medis lengkap diterima dalam 1–3 hari kerja.
+                        </div>
+                    </details>
+
+                    <details style="border: 1px solid rgba(0,107,90,0.2); border-radius: 12px; overflow: hidden;">
+                        <summary style="padding: 1.25rem 1.5rem; cursor: pointer; font-weight: 600; color: var(--on-surface); display: flex; justify-content: space-between; align-items: center; list-style: none; user-select: none; background: var(--surface-canvas, #fbf9f8);">
+                            Apa saja persiapan yang perlu dilakukan sebelum MCU?
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="var(--primary-container)" viewBox="0 0 16 16" style="flex-shrink:0;">
+                                <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                            </svg>
+                        </summary>
+                        <div style="padding: 1.25rem 1.5rem; border-top: 1px solid rgba(0,107,90,0.1); background: #fff; color: var(--secondary-neutral); font-size: 0.9rem; line-height: 1.7;">
+                            <ul style="padding-left: 1.25rem; margin: 0;">
+                                <li style="margin-bottom: 0.4rem;"><strong>Puasa 10–12 jam</strong> sebelum pemeriksaan (air putih boleh).</li>
+                                <li style="margin-bottom: 0.4rem;">Hindari olahraga berat 24 jam sebelumnya.</li>
+                                <li style="margin-bottom: 0.4rem;">Bawa KTP, kartu asuransi (jika ada), dan daftar obat rutin yang dikonsumsi.</li>
+                                <li>Wanita tidak sedang dalam masa haid (untuk pemeriksaan urin lengkap).</li>
+                            </ul>
+                        </div>
+                    </details>
+
+                    <details style="border: 1px solid rgba(0,107,90,0.2); border-radius: 12px; overflow: hidden;">
+                        <summary style="padding: 1.25rem 1.5rem; cursor: pointer; font-weight: 600; color: var(--on-surface); display: flex; justify-content: space-between; align-items: center; list-style: none; user-select: none; background: var(--surface-canvas, #fbf9f8);">
+                            Apakah MCU di RS Awal Bros Dumai bisa diklaim BPJS Kesehatan?
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="var(--primary-container)" viewBox="0 0 16 16" style="flex-shrink:0;">
+                                <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                            </svg>
+                        </summary>
+                        <div style="padding: 1.25rem 1.5rem; border-top: 1px solid rgba(0,107,90,0.1); background: #fff; color: var(--secondary-neutral); font-size: 0.9rem; line-height: 1.7;">
+                            Program MCU bersifat <strong>skrining promotif-preventif</strong> sehingga umumnya tidak termasuk dalam tanggungan BPJS Kesehatan. Namun, MCU dapat diklaim melalui <strong>BPJS Ketenagakerjaan (JKK)</strong> jika berkaitan dengan kecelakaan kerja atau standar K3 industri, serta dapat diklaim melalui <strong>asuransi kesehatan swasta</strong> dengan benefit MCU tahunan.
+                        </div>
+                    </details>
+
+                    <details style="border: 1px solid rgba(0,107,90,0.2); border-radius: 12px; overflow: hidden;">
+                        <summary style="padding: 1.25rem 1.5rem; cursor: pointer; font-weight: 600; color: var(--on-surface); display: flex; justify-content: space-between; align-items: center; list-style: none; user-select: none; background: var(--surface-canvas, #fbf9f8);">
+                            Seberapa sering sebaiknya melakukan Medical Check Up?
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="var(--primary-container)" viewBox="0 0 16 16" style="flex-shrink:0;">
+                                <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                            </svg>
+                        </summary>
+                        <div style="padding: 1.25rem 1.5rem; border-top: 1px solid rgba(0,107,90,0.1); background: #fff; color: var(--secondary-neutral); font-size: 0.9rem; line-height: 1.7;">
+                            Rekomendasi Dokter Spesialis Okupasi:
+                            <ul style="padding-left: 1.25rem; margin: 0.5rem 0 0 0;">
+                                <li style="margin-bottom: 0.4rem;"><strong>Usia 18–39 tahun:</strong> MCU minimal 1x per 2 tahun.</li>
+                                <li style="margin-bottom: 0.4rem;"><strong>Usia 40–59 tahun:</strong> MCU minimal 1x per tahun.</li>
+                                <li style="margin-bottom: 0.4rem;"><strong>Usia 60+ tahun / Riwayat Penyakit Kronis:</strong> MCU minimal 2x per tahun.</li>
+                                <li><strong>Pekerja Industri Risiko Tinggi:</strong> MCU wajib 1x per tahun sesuai regulasi K3.</li>
+                            </ul>
+                        </div>
+                    </details>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. CTA FINAL WELLNESS BANNER -->
+        <section style="padding: 5rem 0; background: linear-gradient(135deg, var(--primary, #006b5a) 0%, var(--primary-container, #00a88f) 50%, #20c997 100%); position: relative; overflow: hidden;">
+            <div style="position: absolute; top: -80px; right: -80px; width: 300px; height: 300px; border-radius: 50%; background: rgba(255,255,255,0.04); pointer-events: none;" aria-hidden="true"></div>
+            <div style="position: absolute; bottom: -60px; left: -40px; width: 200px; height: 200px; border-radius: 50%; background: rgba(255,255,255,0.05); pointer-events: none;" aria-hidden="true"></div>
+
+            <div class="container" style="position: relative; z-index: 1;">
+                <div style="display: grid; grid-template-columns: 1fr auto; gap: 3rem; align-items: center;">
+                    <div>
+                        <p style="color: rgba(255,255,255,0.85); font-size: 0.875rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 700; margin-bottom: 0.75rem;">Investasi Terbaik untuk Kesehatanmu</p>
+                        <h2 style="color: #ffffff; font-size: clamp(1.5rem, 3.5vw, 2.5rem); font-weight: 800; margin: 0 0 1rem 0; line-height: 1.2;">
+                            Deteksi Penyakit Lebih Awal. Hidup Lebih Sehat & Produktif!
+                        </h2>
+                        <p style="color: rgba(255,255,255,0.9); font-size: 1.05rem; line-height: 1.7; max-width: 620px; margin: 0;">
+                            Jadwalkan MCU Anda hari ini dan dapatkan deteksi dini berbagai risiko penyakit serius sebelum berkembang menjadi komplikasi yang lebih berat.
+                        </p>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 1rem; min-width: 220px;">
+                        <a href="janji-temu.html" id="cta-final-mcu-booking"
+                            style="display: flex; align-items: center; justify-content: center; gap: 0.6rem; background: #ffffff; color: var(--primary, #006b5a); padding: 1rem 1.75rem; border-radius: 10px; font-weight: 800; font-size: 1rem; text-decoration: none; transition: transform 0.2s, box-shadow 0.2s; box-shadow: 0 6px 20px rgba(0,0,0,0.2);"
+                            onmouseover="this.style.transform='translateY(-2px)'"
+                            onmouseout="this.style.transform=''">
+                            📅 Booking MCU Sekarang
+                        </a>
+                        <a href="https://wa.me/6281234567890?text=Halo%20saya%20ingin%20bertanya%20paket%20MCU%20Corporate" id="cta-final-mcu-wa" target="_blank"
+                            style="display: flex; align-items: center; justify-content: center; gap: 0.5rem; background: rgba(255,255,255,0.15); color: #ffffff; padding: 0.875rem 1.75rem; border-radius: 10px; font-weight: 700; font-size: 0.95rem; text-decoration: none; border: 2px solid rgba(255,255,255,0.5); transition: background 0.2s;"
+                            onmouseover="this.style.background='rgba(255,255,255,0.25)'"
+                            onmouseout="this.style.background='rgba(255,255,255,0.15)'">
+                            💬 Konsultasi Paket Corporate
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Master Footer Placeholder -->
+    <div id="footer-placeholder">
+        <footer class="site-footer">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-col">
+                        <h4>RS Awal Bros Dumai</h4>
+                        <p style="margin-bottom: 1rem; font-size: 0.95rem; line-height: 1.6;">
+                            Rumah sakit terkemuka berstandar internasional di Kota Dumai yang berkomitmen memberikan
+                            pelayanan kesehatan berkualitas, cepat, dan profesional bagi masyarakat.
+                        </p>
+                        <div style="display: flex; gap: 0.75rem;">
+                            <span class="emergency-badge" style="display: inline-block;">Akreditasi Paripurna KARS</span>
+                        </div>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4>Navigasi Utama</h4>
+                        <ul class="footer-links">
+                            <li><a href="index.html">Beranda</a></li>
+                            <li><a href="tentang-kami.html">Tentang Kami</a></li>
+                            <li><a href="layanan.html">Layanan</a></li>
+                            <li><a href="dokter.html">Dokter Spesialis</a></li>
+                            <li><a href="fasilitas.html">Fasilitas Medis</a></li>
+                            <li><a href="janji-temu.html">Janji Temu Online</a></li>
+                            <li><a href="kontak.html">Kontak &amp; Lokasi</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4>Layanan Unggulan</h4>
+                        <ul class="footer-links">
+                            <li><a href="igd-ambulans.html">Instalasi Gawat Darurat (IGD 24/7)</a></li>
+                            <li><a href="poliklinikspesialis.html">Poliklinik Spesialis</a></li>
+                            <li><a href="layananrawatinap.html">Rawat Inap &amp; ICU</a></li>
+                            <li><a href="laboratorium-radiologi.html">Laboratorium &amp; Radiologi</a></li>
+                            <li><a href="medical-check-up.html">Medical Check Up (MCU)</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4>Kontak &amp; Alamat</h4>
+                        <div class="footer-contact-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                fill="var(--primary-container)" viewBox="0 0 16 16"
+                                style="flex-shrink: 0; margin-top: 3px;">
+                                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                            </svg>
+                            <span>Jl. Jendral Sudirman No. 88, Kota Dumai, Riau 28812</span>
+                        </div>
+                        <div class="footer-contact-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                fill="var(--primary-container)" viewBox="0 0 16 16"
+                                style="flex-shrink: 0; margin-top: 3px;">
+                                <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l.975-.978a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328z" />
+                            </svg>
+                            <span>Emergency IGD: (0765) 38888<br>Call Center: (0765) 38889</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <p>&copy; 2026 RS Awal Bros Dumai. Hak Cipta Dilindungi Undang-Undang.</p>
+                    <p style="font-size: 0.8rem; color: #9ca3af;">Corporate Style &bull; Pure Native Web</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Floating Action Button WhatsApp MCU -->
+    <a href="https://wa.me/6281234567890?text=Halo%20RS%20Awal%20Bros%20Dumai,%20saya%20ingin%20bertanya%20informasi%20paket%20MCU"
+        class="fab-whatsapp" target="_blank" aria-label="Customer Service WhatsApp MCU">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
+            <path
+                d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.601 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.068-.315-.099-.448.099-.133.197-.513.646-.629.779-.116.133-.232.148-.43.05-.197-.099-.833-.307-1.587-.979-.587-.524-.984-1.171-1.1-1.368-.115-.198-.012-.305.086-.404.088-.088.197-.232.296-.347.099-.116.132-.197.197-.33.066-.133.033-.248-.017-.347-.05-.099-.448-1.08-.614-1.477-.161-.387-.326-.335-.448-.341l-.382-.007c-.133 0-.348.05-.53.248-.182.198-.696.68-.696 1.658 0 .979.712 1.925.812 2.057.099.133 1.402 2.14 3.397 3.001.475.205.846.328 1.135.42.477.152.911.13 1.254.079.383-.057 1.17-.478 1.335-.94.165-.463.165-.859.116-.94-.049-.082-.182-.132-.379-.231z" />
+        </svg>
+    </a>
+
+    <!-- Component Loader JS & Main JS -->
+    <script src="../js/components.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>
